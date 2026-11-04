@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Client Radar">
+    <meta name="theme-color" content="#0f172a">
+    <title>Client Radar - High Priority Opportunities</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --surface-hover: #334155;
+            --primary: #38bdf8;
+            --primary-hover: #0ea5e9;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --border: #334155;
+            --accent: #10b981;
+        }
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: calc(16px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 16px;
+            margin-bottom: 18px;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+        .timestamp {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+        .search-box {
+            width: 100%;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 16px;
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .search-box:focus {
+            border-color: var(--primary);
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .job-title {
+            margin: 0 0 6px 0;
+            font-size: 1.15rem;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+        .company {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        .source {
+            color: var(--primary);
+            font-weight: 500;
+        }
+        .score-badge {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            white-space: nowrap;
+        }
+        .badges-row {
+            margin: 12px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .focus-badge {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge {
+            background: var(--surface-hover);
+            color: var(--muted);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+        }
+        .snippet {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+        .btn {
+            flex: 1;
+            min-width: 140px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            transition: all 0.15s ease;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: #0f172a;
+        }
+        .btn-primary:active {
+            background: var(--primary-hover);
+            transform: scale(0.98);
+        }
+        .btn-secondary {
+            background: var(--surface-hover);
+            color: #ffffff;
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:active {
+            background: #475569;
+            transform: scale(0.98);
+        }
+        .proposal-preview {
+            margin-top: 14px;
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+        }
+        details summary {
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 4px 0;
+        }
+        pre {
+            background: #090d16;
+            padding: 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: #e2e8f0;
+            font-size: 0.82rem;
+            line-height: 1.45;
+            white-space: pre-wrap;
+            border: 1px solid #1e293b;
+            margin-top: 8px;
+        }
+        .toast {
+            position: fixed;
+            bottom: calc(24px + env(safe-area-inset-bottom));
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #064e3b;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            display: none;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            z-index: 9999;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-top">
+                <h1>Client Radar</h1>
+                <div class="score-badge" id="countBadge">32 Roles</div>
+            </div>
+            <div class="timestamp">Updated 2026-11-04 03:04 &bull; 100% Free Direct Applications</div>
+            <input type="text" id="searchInput" class="search-box" placeholder="Filter by tech (FastAPI, React, Python) or company..." onkeyup="filterCards()">
+        </div>
+        <div id="cardsList">
+            
+        <div class="card" data-search="senior backend developer (python) proxify ab backend (python & postgresql) python postgresql docker backend weworkremotely (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Senior Backend Developer (Python)</h2>
+                    <p class="company">Proxify AB &bull; <span class="source">WeWorkRemotely (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 110%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">Python</span><span class="badge">PostgreSQL</span><span class="badge">Docker</span><span class="badge">Backend</span>
+            </div>
+
+            <p class="snippet">Headquarters: Sweden URL: http://career.proxify.io The Role: We are looking for a Senior Python Developer for one of our clients. You are a perfect candidate if you are growth-oriented, you love what you do, and you enjoy working on new ideas to develop exciting products. What we are looking for: 5+...</p>
+
+            <div class="actions">
+                <a href="https://weworkremotely.com/remote-jobs/proxify-ab-senior-backend-developer-python-11" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(0)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-0">Subject: Senior Backend Developer (Python) Application - Muhammad Junaid Warraich
+
+Hi Proxify AB Hiring Team,
+
+I am writing regarding your opening for Senior Backend Developer (Python). My focus is designing robust, high-concurrency backend services using Python, PostgreSQL, and Docker. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Proxify AB's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="backend engineers, sr close backend (python & postgresql) fastapi python postgresql backend hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Backend Engineers, Sr</h2>
+                    <p class="company">Close &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 110%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">FastAPI</span><span class="badge">Python</span><span class="badge">PostgreSQL</span><span class="badge">Backend</span>
+            </div>
+
+            <p class="snippet">Close | Backend Engineers, Sr. Software Engineer (Marketing) | REMOTE (US) https://close.com/careers Close is a CRM for small and midsize sales teams (11,000+ paying customers). In 2026 we shipped Chloe, our AI agent that makes sales calls and works inside the CRM. Backend Engineers (Senior / Staff)...</p>
+
+            <div class="actions">
+                <a href="https://close.com/careers" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(1)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-1">Subject: Backend Engineers, Sr Application - Muhammad Junaid Warraich
+
+Hi Close Hiring Team,
+
+I am writing regarding your opening for Backend Engineers, Sr. My focus is designing robust, high-concurrency backend services using FastAPI, Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Close's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="senior react full-stack developer lemon.io full-stack (python & react) python react full-stack weworkremotely (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Senior React Full-stack Developer</h2>
+                    <p class="company">Lemon.io &bull; <span class="source">WeWorkRemotely (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 95%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">Python</span><span class="badge">React</span><span class="badge">Full-Stack</span>
+            </div>
+
+            <p class="snippet">Headquarters: New York, NY URL: https://lemon.io Are you a talented Senior Developer looking for a remote job that lets you show your skills and get decent compensation? Look no further than Lemon.io — the marketplace that connects you with hand-picked startups in the US and Europe. What we offer: T...</p>
+
+            <div class="actions">
+                <a href="https://weworkremotely.com/remote-jobs/lemon-io-senior-react-full-stack-developer-7" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(2)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-2">Subject: Senior React Full-stack Developer Application - Muhammad Junaid Warraich
+
+Hi Lemon.io Hiring Team,
+
+I am writing regarding your opening for Senior React Full-stack Developer. I specialize in end-to-end systems with Python, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Lemon.io's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="senior backend engineer, medical data pipeline (python + rust) neuralframe backend (python & postgresql) python postgresql backend hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Senior Backend Engineer, Medical Data Pipeline (Python + Rust)</h2>
+                    <p class="company">NeuralFrame &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 95%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">Python</span><span class="badge">PostgreSQL</span><span class="badge">Backend</span>
+            </div>
+
+            <p class="snippet">NeuralFrame | Senior Backend Engineer, Medical Data Pipeline (Python + Rust) | REMOTE (US only, US time zones; no visa sponsorship) | Full-time | $170k–$210k + 0.1%–0.25% equity We build software that hospitals, cancer registries and researchers use. You'd own the pipeline that pulls data from hospi...</p>
+
+            <div class="actions">
+                <a href="https://wellfound.com/jobs/4829721-senior-backend-software-engineer-medical-data-pipeline" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(3)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-3">Subject: Senior Backend Engineer, Medical Data Pipeline (Python + Rust) Application - Muhammad Junaid Warraich
+
+Hi NeuralFrame Hiring Team,
+
+I am writing regarding your opening for Senior Backend Engineer, Medical Data Pipeline (Python + Rust). My focus is designing robust, high-concurrency backend services using Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with NeuralFrame's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="staff full-stack engineer, quality & delivery propel labs full-stack (python & react) python postgresql react full-stack hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Staff Full-Stack Engineer, Quality & Delivery</h2>
+                    <p class="company">Propel Labs &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 95%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">Python</span><span class="badge">PostgreSQL</span><span class="badge">React</span><span class="badge">Full-Stack</span>
+            </div>
+
+            <p class="snippet">Propel Labs | Staff Full-Stack Engineer, Quality & Delivery | Remote (North America hours) | Full-time | https://propellabs.ai Hello HN, Lisa here from Propel! We're a bunch of interdisciplinary builder-maker-designers leading a venture studio and building software for mining and deep-tech companies...</p>
+
+            <div class="actions">
+                <a href="https://propellabs.ai" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(4)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-4">Subject: Staff Full-Stack Engineer, Quality & Delivery Application - Muhammad Junaid Warraich
+
+Hi Propel Labs Hiring Team,
+
+I am writing regarding your opening for Staff Full-Stack Engineer, Quality & Delivery. I specialize in end-to-end systems with Python, PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Propel Labs's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="software engineer direct tech founder backend (python & postgresql) fastapi python postgresql hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Software Engineer</h2>
+                    <p class="company">Direct Tech Founder &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 90%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">FastAPI</span><span class="badge">Python</span><span class="badge">PostgreSQL</span>
+            </div>
+
+            <p class="snippet">Location: Dorset, UK Remote: Yes (UK, US and EU time zones) Willing to relocate: No Technologies: Ruby on Rails, Python (FastAPI), TypeScript/Node, Go, PostgreSQL, AWS, Hotwire Résumé/CV: https://wagnermatos.co.uk Email: wm@wagnermatos.co.uk Senior engineer, 15 years. I build complete products on a ...</p>
+
+            <div class="actions">
+                <a href="https://wagnermatos.co.uk" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(5)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-5">Subject: Software Engineer Application - Muhammad Junaid Warraich
+
+Hi Direct Tech Founder Hiring Team,
+
+I am writing regarding your opening for Software Engineer. My focus is designing robust, high-concurrency backend services using FastAPI, Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Direct Tech Founder's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="senior fullstack developer (react.js / node.js) proxify ab full-stack (python & react) postgresql react full-stack weworkremotely (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Senior Fullstack Developer (React.js / Node.js)</h2>
+                    <p class="company">Proxify AB &bull; <span class="source">WeWorkRemotely (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 85%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span><span class="badge">Full-Stack</span>
+            </div>
+
+            <p class="snippet">Headquarters: Sweden URL: http://career.proxify.io The Role: We are looking for a Senior Fullstack Developer skilled in React.js and Node.js for one of our clients. You are a perfect candidate if you are growth-oriented, you love what you do, and you enjoy working on new ideas to develop exciting pr...</p>
+
+            <div class="actions">
+                <a href="https://weworkremotely.com/remote-jobs/proxify-ab-senior-fullstack-developer-react-js-node-js-5" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(6)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-6">Subject: Senior Fullstack Developer (React.js / Node.js) Application - Muhammad Junaid Warraich
+
+Hi Proxify AB Hiring Team,
+
+I am writing regarding your opening for Senior Fullstack Developer (React.js / Node.js). I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Proxify AB's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="staff backend engineer hatch backend (python & postgresql) python postgresql docker backend hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Staff Backend Engineer</h2>
+                    <p class="company">Hatch &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 85%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">Python</span><span class="badge">PostgreSQL</span><span class="badge">Docker</span><span class="badge">Backend</span>
+            </div>
+
+            <p class="snippet">Hatch | Staff Backend Engineer | REMOTE (US/Canada, Pacific Time hours) | Full-time | https://hatch.co Hatch makes smart sleep devices and science-backed content to help people build healthy sleep habits, from newborns to adults. Our lineup includes the Hatch Sleep Clock, a contactless sleep tracker...</p>
+
+            <div class="actions">
+                <a href="https://hatch.co" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(7)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-7">Subject: Staff Backend Engineer Application - Muhammad Junaid Warraich
+
+Hi Hatch Hiring Team,
+
+I am writing regarding your opening for Staff Backend Engineer. My focus is designing robust, high-concurrency backend services using Python, PostgreSQL, and Docker. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Hatch's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="full-stack e-commerce developer with sage x3 experience toptal backend (python & postgresql) python postgresql full-stack weworkremotely (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Full-Stack E-commerce Developer with Sage X3 Experience</h2>
+                    <p class="company">Toptal &bull; <span class="source">WeWorkRemotely (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 70%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">Python</span><span class="badge">PostgreSQL</span><span class="badge">Full-Stack</span>
+            </div>
+
+            <p class="snippet">Headquarters: Summary We are seeking a Full-Stack Developer to build or customize a dealer e-commerce platform connected to an existing Sage X3 ERP environment. The role is focused on selecting the right e-commerce approach, implementing the portal, and supporting dealer-facing workflows in a manufa...</p>
+
+            <div class="actions">
+                <a href="https://weworkremotely.com/remote-jobs/toptal-full-stack-e-commerce-developer-with-sage-x3-experience" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(8)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-8">Subject: Full-Stack E-commerce Developer with Sage X3 Experience Application - Muhammad Junaid Warraich
+
+Hi Toptal Hiring Team,
+
+I am writing regarding your opening for Full-Stack E-commerce Developer with Sage X3 Experience. My focus is designing robust, high-concurrency backend services using Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Toptal's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="software engineers (sre, ml, backend, full-stack, mobile, security, qa) radar labs backend (python & postgresql) python backend full-stack hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA)</h2>
+                    <p class="company">Radar Labs &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 70%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">Python</span><span class="badge">Backend</span><span class="badge">Full-Stack</span>
+            </div>
+
+            <p class="snippet">Radar Labs | Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) | Remote (US), NYC | Full Time | https://radar.com - Radar is the geo-location dev tool - Doing 1B+ API calls per day - Our main languages are Rust and TypeScript, we also use mobile and offline pipeline languages (...</p>
+
+            <div class="actions">
+                <a href="https://radar.com" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(9)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-9">Subject: Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) Application - Muhammad Junaid Warraich
+
+Hi Radar Labs Hiring Team,
+
+I am writing regarding your opening for Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA). My focus is designing robust, high-concurrency backend services using Python. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Radar Labs's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="full time: software engineer position - react and rest yooli full-stack (python & react) postgresql react weworkremotely (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">FULL TIME: Software Engineer Position - React and Rest</h2>
+                    <p class="company">Yooli &bull; <span class="source">WeWorkRemotely (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 65%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span>
+            </div>
+
+            <p class="snippet">Headquarters: Australia URL: http://yooli.co Job description We are seeking a highly skilled Senior Software Engineer to join our team and contribute to the transformative tech evolution in healthcare. This critical role involves developing, integrating, and optimising our backend and database syste...</p>
+
+            <div class="actions">
+                <a href="https://weworkremotely.com/remote-jobs/yooli-full-time-software-engineer-position-react-and-rest-1" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(10)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-10">Subject: FULL TIME: Software Engineer Position - React and Rest Application - Muhammad Junaid Warraich
+
+Hi Yooli Hiring Team,
+
+I am writing regarding your opening for FULL TIME: Software Engineer Position - React and Rest. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Yooli's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="full-stack engineer (elixir, phoenix liveview, react) treat health frontend (react & ui systems) react full-stack hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Full-stack Engineer (Elixir, Phoenix LiveView, React)</h2>
+                    <p class="company">Treat Health &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 65%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Frontend (React & UI Systems)</span>
+                <span class="badge">React</span><span class="badge">Full-Stack</span>
+            </div>
+
+            <p class="snippet">Treat Health | Full-stack Engineer (Elixir, Phoenix LiveView, React) | Helsinki, Finland | ONSITE | Full-time | Compensation in the link below Treat Health is building healthcare where the right care takes minutes, not days. You describe your concern in your own words, our smart intake asks the foll...</p>
+
+            <div class="actions">
+                <a href="https://treat.health/en/careers/full-stack-engineer/" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(11)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-11">Subject: Full-stack Engineer (Elixir, Phoenix LiveView, React) Application - Muhammad Junaid Warraich
+
+Hi Treat Health Hiring Team,
+
+I am writing regarding your opening for Full-stack Engineer (Elixir, Phoenix LiveView, React). I deliver production-grade software using React 18, emphasizing clean architecture, containerized deployments, and high test reliability.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Treat Health's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="senior software engineer, data doximity backend (python & postgresql) python postgresql weworkremotely (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Senior Software Engineer, Data</h2>
+                    <p class="company">Doximity &bull; <span class="source">WeWorkRemotely (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 50%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">Python</span><span class="badge">PostgreSQL</span>
+            </div>
+
+            <p class="snippet">Headquarters: San Francisco, CA or Remote (U.S.) Location : This role is remote in the United States, Canada, or some countries in South America. Visa sponsorship is not available for this role. Doximity is the leading clinical AI company with the largest network of U.S. clinicians. Doximity’s AI-po...</p>
+
+            <div class="actions">
+                <a href="https://weworkremotely.com/remote-jobs/doximity-senior-software-engineer-data" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(12)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-12">Subject: Senior Software Engineer, Data Application - Muhammad Junaid Warraich
+
+Hi Doximity Hiring Team,
+
+I am writing regarding your opening for Senior Software Engineer, Data. My focus is designing robust, high-concurrency backend services using Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Doximity's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="software developer odoo backend (python & postgresql) python postgresql hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Software Developer</h2>
+                    <p class="company">Odoo &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 50%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">Python</span><span class="badge">PostgreSQL</span>
+            </div>
+
+            <p class="snippet">Odoo | Software Developer | Hybrid (Belgium, 3 days/week) | Full-time | Visa + €10k Signing Bonus | https://www.odoo.com/r/4zN Odoo builds open-source business apps used by millions. We're hiring software developers to work on our Python/PostgreSQL backend, fast JS framework, mobile apps, website bu...</p>
+
+            <div class="actions">
+                <a href="https://www.odoo.com/r/4zN" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(13)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-13">Subject: Software Developer Application - Muhammad Junaid Warraich
+
+Hi Odoo Hiring Team,
+
+I am writing regarding your opening for Software Developer. My focus is designing robust, high-concurrency backend services using Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Odoo's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="engineering manager, data platform (nyc, hybrid) we’re a series b trading technology company reimagining how financial markets match buyers and sellers -- applying auction theory and innovative technologies to build fairer, more efficient trading infrastructure onechronos backend (python & postgresql) python postgresql hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Engineering Manager, Data Platform (NYC, Hybrid) We’re a Series B trading technology company reimagining how financial markets match buyers and sellers -- applying auction theory and innovative technologies to build fairer, more efficient trading infrastructure</h2>
+                    <p class="company">OneChronos &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 50%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">Python</span><span class="badge">PostgreSQL</span>
+            </div>
+
+            <p class="snippet">OneChronos | Engineering Manager, Data Platform (NYC, Hybrid) We’re a Series B trading technology company reimagining how financial markets match buyers and sellers -- applying auction theory and innovative technologies to build fairer, more efficient trading infrastructure. Our production systems a...</p>
+
+            <div class="actions">
+                <a href="https://news.ycombinator.com/item?id=50012248" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(14)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-14">Subject: Engineering Manager, Data Platform (NYC, Hybrid) We’re a Series B trading technology company reimagining how financial markets match buyers and sellers -- applying auction theory and innovative technologies to build fairer, more efficient trading infrastructure Application - Muhammad Junaid Warraich
+
+Hi OneChronos Hiring Team,
+
+I am writing regarding your opening for Engineering Manager, Data Platform (NYC, Hybrid) We’re a Series B trading technology company reimagining how financial markets match buyers and sellers -- applying auction theory and innovative technologies to build fairer, more efficient trading infrastructure. My focus is designing robust, high-concurrency backend services using Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with OneChronos's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="software engineer & data analyst early-stage startup backend (python & postgresql) python postgresql hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Software Engineer & Data Analyst</h2>
+                    <p class="company">Early-stage Startup &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 50%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">Python</span><span class="badge">PostgreSQL</span>
+            </div>
+
+            <p class="snippet">Early-stage Startup | Software Engineer & Data Analyst | Full-Time | REMOTE (US & Canada) | $150,000 - $180,000 USD We’re hiring for two roles: a strong generalist Software Engineer and a Data Analyst. For the Software Engineer role, we’re looking for someone with solid technical ability and strong ...</p>
+
+            <div class="actions">
+                <a href="mailto:paulephraimebuka@gmail.com?subject=Software Engineer & Data Analyst Application - Muhammad Junaid Warraich" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(15)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-15">Subject: Software Engineer & Data Analyst Application - Muhammad Junaid Warraich
+
+Hi Early-stage Startup Hiring Team,
+
+I am writing regarding your opening for Software Engineer & Data Analyst. My focus is designing robust, high-concurrency backend services using Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Early-stage Startup's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="senior back-end developer lemon.io backend (python & postgresql) python backend remotive (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Senior Back-end Developer</h2>
+                    <p class="company">Lemon.io &bull; <span class="source">Remotive (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 50%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Backend (Python & PostgreSQL)</span>
+                <span class="badge">Python</span><span class="badge">Backend</span>
+            </div>
+
+            <p class="snippet">Lemon.io helps companies in the US and Europe hire experienced engineers, from funded startups to teams like Klarna, Retool, and Pinterest. We’ve been doing this since 2015, and more than 1,500 companies have hired engineers through us. Currently, we have a few open positions from our client, an AI-...</p>
+
+            <div class="actions">
+                <a href="https://remotive.com/remote-jobs/software-development/senior-back-end-developer-2091135" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(16)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-16">Subject: Senior Back-end Developer Application - Muhammad Junaid Warraich
+
+Hi Lemon.io Hiring Team,
+
+I am writing regarding your opening for Senior Back-end Developer. My focus is designing robust, high-concurrency backend services using Python. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Lemon.io's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="engineering manager medify full-stack (python & react) postgresql react weworkremotely (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Engineering Manager</h2>
+                    <p class="company">Medify &bull; <span class="source">WeWorkRemotely (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span>
+            </div>
+
+            <p class="snippet">Headquarters: London URL: http://www.medify.co.uk Remote | Full-Time | UK About Us At Medify, we’re on a mission to widen access to medicine and healthcare careers through world-class digital learning experiences. Since 2009, we’ve helped thousands of students prepare for high-stakes admissions test...</p>
+
+            <div class="actions">
+                <a href="https://weworkremotely.com/remote-jobs/medify-engineering-manager" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(17)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-17">Subject: Engineering Manager Application - Muhammad Junaid Warraich
+
+Hi Medify Hiring Team,
+
+I am writing regarding your opening for Engineering Manager. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Medify's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="senior .net full-stack developer lemon.io frontend (react & ui systems) react full-stack weworkremotely (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Senior .NET Full-stack Developer</h2>
+                    <p class="company">Lemon.io &bull; <span class="source">WeWorkRemotely (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Frontend (React & UI Systems)</span>
+                <span class="badge">React</span><span class="badge">Full-Stack</span>
+            </div>
+
+            <p class="snippet">Headquarters: New York, NY URL: https://lemon.io Are you a talented Senior Developer looking for a remote job that lets you show your skills and get decent compensation? Look no further than Lemon.io — the marketplace that connects you with hand-picked startups in the US and Europe. What we offer: T...</p>
+
+            <div class="actions">
+                <a href="https://weworkremotely.com/remote-jobs/lemon-io-senior-net-full-stack-developer-2" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(18)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-18">Subject: Senior .NET Full-stack Developer Application - Muhammad Junaid Warraich
+
+Hi Lemon.io Hiring Team,
+
+I am writing regarding your opening for Senior .NET Full-stack Developer. I deliver production-grade software using React 18, emphasizing clean architecture, containerized deployments, and high test reliability.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Lemon.io's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="senior angular full-stack developer lemon.io frontend (react & ui systems) react full-stack weworkremotely (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Senior Angular Full-stack Developer</h2>
+                    <p class="company">Lemon.io &bull; <span class="source">WeWorkRemotely (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Frontend (React & UI Systems)</span>
+                <span class="badge">React</span><span class="badge">Full-Stack</span>
+            </div>
+
+            <p class="snippet">Headquarters: New York, NY URL: https://lemon.io Are you a talented Senior Developer looking for a remote job that lets you show your skills and get decent compensation? Look no further than Lemon.io — the marketplace that connects you with hand-picked startups in the US and Europe. What we offer: T...</p>
+
+            <div class="actions">
+                <a href="https://weworkremotely.com/remote-jobs/lemon-io-senior-angular-full-stack-developer" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(19)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-19">Subject: Senior Angular Full-stack Developer Application - Muhammad Junaid Warraich
+
+Hi Lemon.io Hiring Team,
+
+I am writing regarding your opening for Senior Angular Full-stack Developer. I deliver production-grade software using React 18, emphasizing clean architecture, containerized deployments, and high test reliability.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Lemon.io's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="software engineer sticker mule full-stack (python & react) postgresql react weworkremotely (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Software engineer</h2>
+                    <p class="company">Sticker Mule &bull; <span class="source">WeWorkRemotely (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span>
+            </div>
+
+            <p class="snippet">Headquarters: New York, NY URL: https://www.stickermule.com Sticker Mule is building the Internet's most lucrative commerce platform by combining software, manufacturing, and AI into one fully integrated stack. No print company, or pure software company for that matter, can match what we're doing. W...</p>
+
+            <div class="actions">
+                <a href="https://weworkremotely.com/remote-jobs/sticker-mule-software-engineer-3" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(20)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-20">Subject: Software engineer Application - Muhammad Junaid Warraich
+
+Hi Sticker Mule Hiring Team,
+
+I am writing regarding your opening for Software engineer. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Sticker Mule's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="founding engineer, founding engineer (rl environments), founding product designer thankly full-stack (python & react) postgresql react hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Founding Engineer, Founding Engineer (RL Environments), Founding Product Designer</h2>
+                    <p class="company">Thankly &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span>
+            </div>
+
+            <p class="snippet">Thankly | Founding Engineer, Founding Engineer (RL Environments), Founding Product Designer | REMOTE (US) | Full-time | Equity-first Thankly builds branded shopping apps that run inside AI assistants, including ChatGPT, Claude and Gemini. Shoppers ask for what they need in conversation, the app reco...</p>
+
+            <div class="actions">
+                <a href="https://thankly.ai/careers/founding-engineer" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(21)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-21">Subject: Founding Engineer, Founding Engineer (RL Environments), Founding Product Designer Application - Muhammad Junaid Warraich
+
+Hi Thankly Hiring Team,
+
+I am writing regarding your opening for Founding Engineer, Founding Engineer (RL Environments), Founding Product Designer. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Thankly's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="software engineer direct tech founder full-stack (python & react) postgresql react hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Software Engineer</h2>
+                    <p class="company">Direct Tech Founder &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span>
+            </div>
+
+            <p class="snippet">Location: Andalucía, Spain (CET) Remote: Yes – remote only Willing to relocate: No (EU citizen – no visa or work permit needed for EU employers) Technologies: TypeScript, React, Next.js, Node.js, Fastify, React Native, PostgreSQL, Prisma, Supabase, Anthropic SDK (Claude), LLM pipelines, Vitest/Jest,...</p>
+
+            <div class="actions">
+                <a href="https://saturnodev.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(22)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-22">Subject: Software Engineer Application - Muhammad Junaid Warraich
+
+Hi Direct Tech Founder Hiring Team,
+
+I am writing regarding your opening for Software Engineer. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Direct Tech Founder's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="senior full-stack engineer (frontend-leaning) marker learning frontend (react & ui systems) react full-stack hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Senior Full-Stack Engineer (Frontend-Leaning)</h2>
+                    <p class="company">Marker Learning &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Frontend (React & UI Systems)</span>
+                <span class="badge">React</span><span class="badge">Full-Stack</span>
+            </div>
+
+            <p class="snippet">Marker Learning | Senior Full-Stack Engineer (Frontend-Leaning) | Full-time | Remote, US only | $180k–$200k | https://www.markerlearning.com We’re building the Marker Method, a digital assessment platform that helps clinicians understand how students learn. It brings together interactive assessments...</p>
+
+            <div class="actions">
+                <a href="https://www.markerlearning.com" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(23)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-23">Subject: Senior Full-Stack Engineer (Frontend-Leaning) Application - Muhammad Junaid Warraich
+
+Hi Marker Learning Hiring Team,
+
+I am writing regarding your opening for Senior Full-Stack Engineer (Frontend-Leaning). I deliver production-grade software using React 18, emphasizing clean architecture, containerized deployments, and high test reliability.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Marker Learning's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="founding staff / principal engineer proofline full-stack (python & react) postgresql react hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Founding Staff / Principal Engineer</h2>
+                    <p class="company">Proofline &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span>
+            </div>
+
+            <p class="snippet">Proofline | Founding Staff / Principal Engineer | REMOTE (Worldwide, Berlin timezone overlap preferred) | Full-time | €120k-€200k + equity | https://proofline.sh/careers/founding-staff-principal-engine... Hi HN, I'm the founder of Proofline. We're building an infrastructure-aware AI code reviewer th...</p>
+
+            <div class="actions">
+                <a href="https://proofline.sh/careers/founding-staff-principal-engineer/" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(24)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-24">Subject: Founding Staff / Principal Engineer Application - Muhammad Junaid Warraich
+
+Hi Proofline Hiring Team,
+
+I am writing regarding your opening for Founding Staff / Principal Engineer. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Proofline's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="senior systems / rust engineer blockrotate full-stack (python & react) postgresql react hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Senior Systems / Rust Engineer</h2>
+                    <p class="company">Blockrotate &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span>
+            </div>
+
+            <p class="snippet">Blockrotate| Senior Systems / Rust Engineer | Remote (US/EU timezones preferred) | Full-time | $130k - $170k + Equity Blockrotate ( https://blockrotate.com ) builds low-latency copy-trading and execution infrastructure for Polymarket and prediction markets. Copy trading on prediction markets has str...</p>
+
+            <div class="actions">
+                <a href="https://blockrotate.com" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(25)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-25">Subject: Senior Systems / Rust Engineer Application - Muhammad Junaid Warraich
+
+Hi Blockrotate Hiring Team,
+
+I am writing regarding your opening for Senior Systems / Rust Engineer. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Blockrotate's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="software engineer, new product line valis (valis insights) full-stack (python & react) postgresql react hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Software Engineer, new product line</h2>
+                    <p class="company">VALIS (Valis Insights) &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span>
+            </div>
+
+            <p class="snippet">VALIS (Valis Insights) | Software Engineer, new product line | REMOTE (US, East Coast hours) | Full-time | $125k-$155k + equity I'm Caleb, co-founder/CTO. VALIS builds data products for scrap metal recyclers. Our product images, weighs, and classifies scrap metal, and our platform turns that into ac...</p>
+
+            <div class="actions">
+                <a href="https://apply.workable.com/valis-insights-1/j/9D0C64C055" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(26)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-26">Subject: Software Engineer, new product line Application - Muhammad Junaid Warraich
+
+Hi VALIS (Valis Insights) Hiring Team,
+
+I am writing regarding your opening for Software Engineer, new product line. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with VALIS (Valis Insights)'s current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="ai engineer apprentice startuphakk full-stack (python & react) postgresql react hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">AI Engineer Apprentice</h2>
+                    <p class="company">StartupHakk &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span>
+            </div>
+
+            <p class="snippet">StartupHakk | AI Engineer Apprentice | Remote (UT or ID residents only) | Full-time | $7.25–$10/hr | startuphakk.com/jobs We are hiring military veterans (and transitioning service members) living in Utah or Idaho for a paid, 1-year registered remote apprenticeship program in full-stack web developm...</p>
+
+            <div class="actions">
+                <a href="https://startuphakk.com/jobs" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(27)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-27">Subject: AI Engineer Apprentice Application - Muhammad Junaid Warraich
+
+Hi StartupHakk Hiring Team,
+
+I am writing regarding your opening for AI Engineer Apprentice. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with StartupHakk's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="software engineer direct tech founder full-stack (python & react) postgresql react hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Software Engineer</h2>
+                    <p class="company">Direct Tech Founder &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span>
+            </div>
+
+            <p class="snippet">Flowstate (London, UK) — Founding Engineer — TypeScript / React / Postgres / AI Flowstate ( https://www.flowstate.inc ) is building infrastructure for the emerging human + AI workforce. Companies are rapidly adopting Claude, ChatGPT, Cursor, Copilot and internal agents, but most still have very litt...</p>
+
+            <div class="actions">
+                <a href="https://www.flowstate.inc" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(28)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-28">Subject: Software Engineer Application - Muhammad Junaid Warraich
+
+Hi Direct Tech Founder Hiring Team,
+
+I am writing regarding your opening for Software Engineer. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Direct Tech Founder's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="software engineer direct tech founder full-stack (python & react) postgresql react hacker news (direct contact)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Software Engineer</h2>
+                    <p class="company">Direct Tech Founder &bull; <span class="source">Hacker News (Direct Contact)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Full-Stack (Python & React)</span>
+                <span class="badge">PostgreSQL</span><span class="badge">React</span>
+            </div>
+
+            <p class="snippet">Empower Pharmacy is hiring engineers to work on event-driven, distributed systems that actually run a real-world business (regulated pharma), not ad tech or yet another CRUD SaaS. We just filled one Staff Engineer role directly from my last LinkedIn post (thanks to everyone who shared/applied). Now ...</p>
+
+            <div class="actions">
+                <a href="https://lnkd.in/g926gzEx" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(29)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-29">Subject: Software Engineer Application - Muhammad Junaid Warraich
+
+Hi Direct Tech Founder Hiring Team,
+
+I am writing regarding your opening for Software Engineer. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Direct Tech Founder's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="full stack software engineer - clearance required himalayas partner frontend (react & ui systems) react full-stack himalayas (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Full Stack Software Engineer - Clearance Required</h2>
+                    <p class="company">Himalayas Partner &bull; <span class="source">Himalayas (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Frontend (React & UI Systems)</span>
+                <span class="badge">React</span><span class="badge">Full-Stack</span>
+            </div>
+
+            <p class="snippet">OverviewWe're looking for a Full Stack Software Engineer with expertise across the frontend (React, TypeScript, CSS, HTML) and backend (Node....</p>
+
+            <div class="actions">
+                <a href="https://himalayas.app/companies/logistics-management-institute/jobs/full-stack-software-engineer-clearance-required" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(30)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-30">Subject: Full Stack Software Engineer - Clearance Required Application - Muhammad Junaid Warraich
+
+Hi Himalayas Partner Hiring Team,
+
+I am writing regarding your opening for Full Stack Software Engineer - Clearance Required. I deliver production-grade software using React 18, emphasizing clean architecture, containerized deployments, and high test reliability.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Himalayas Partner's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        <div class="card" data-search="full-stack developer fluence international, inc. frontend (react & ui systems) react full-stack remotive (free apply)">
+            <div class="card-header">
+                <div>
+                    <h2 class="job-title">Full-Stack Developer</h2>
+                    <p class="company">Fluence International, Inc. &bull; <span class="source">Remotive (Free Apply)</span></p>
+                </div>
+                <div class="score-badge">Match: 45%</div>
+            </div>
+            
+            <div class="badges-row">
+                <span class="focus-badge">Frontend (React & UI Systems)</span>
+                <span class="badge">React</span><span class="badge">Full-Stack</span>
+            </div>
+
+            <p class="snippet">We’re looking for a pragmatic, security-minded Full-Stack Developer to help build and scale Fluence’s B2B products used by clinicians, researchers, and organizations in psychedelic-assisted therapy and mental health. You’ll work closely with and report to our Senior AI & Design Lead to turn product ...</p>
+
+            <div class="actions">
+                <a href="https://remotive.com/remote-jobs/software-development/full-stack-developer-2091165" target="_blank" rel="noopener" class="btn btn-primary">Open Application &rarr;</a>
+                <button class="btn btn-secondary" onclick="copyProposal(31)">Copy Proposal</button>
+            </div>
+
+            <div class="proposal-preview">
+                <details>
+                    <summary>View Tailored Proposal</summary>
+                    <pre id="proposal-31">Subject: Full-Stack Developer Application - Muhammad Junaid Warraich
+
+Hi Fluence International, Inc. Hiring Team,
+
+I am writing regarding your opening for Full-Stack Developer. I deliver production-grade software using React 18, emphasizing clean architecture, containerized deployments, and high test reliability.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Fluence International, Inc.'s current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+</pre>
+                </details>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    <div id="toast" class="toast">Proposal copied to clipboard!</div>
+    <script>
+        function copyProposal(idx) {
+            const text = document.getElementById('proposal-' + idx).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('toast');
+                toast.style.display = 'block';
+                setTimeout(() => { toast.style.display = 'none'; }, 2200);
+            });
+        }
+        function filterCards() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            let visibleCount = 0;
+            cards.forEach(card => {
+                const text = card.getAttribute('data-search');
+                if (text.includes(query)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            document.getElementById('countBadge').innerText = visibleCount + ' Roles';
+        }
+    </script>
+</body>
+</html>
