@@ -1,21 +1,21 @@
 # Client Radar: Verified Opportunities
 
-Generated: 2026-11-04 03:04
+Generated: 2026-11-04 03:25
 
-### 1. Senior Backend Developer (Python) - Proxify AB (Match: 110%)
+### 1. Python + SQL Software Engineer - Multiply (Match: 135%)
 - **Focus:** Backend (Python & PostgreSQL)
-- **Source:** WeWorkRemotely (Free Apply)
-- **Apply URL:** https://weworkremotely.com/remote-jobs/proxify-ab-senior-backend-developer-python-11
-- **Matched Keywords:** Python, PostgreSQL, Docker, Backend
+- **Source:** Direct Employer (Hacker News)
+- **Apply URL:** mailto:jobs@multiply.cloud?subject=Python + SQL Software Engineer Application - Muhammad Junaid Warraich
+- **Matched Keywords:** FastAPI, Python, PostgreSQL, SQLAlchemy
 
 <details><summary>Tailored Proposal</summary>
 
 ```
-Subject: Senior Backend Developer (Python) Application - Muhammad Junaid Warraich
+Subject: Python + SQL Software Engineer Application - Muhammad Junaid Warraich
 
-Hi Proxify AB Hiring Team,
+Hi Multiply Hiring Team,
 
-I am writing regarding your opening for Senior Backend Developer (Python). My focus is designing robust, high-concurrency backend services using Python, PostgreSQL, and Docker. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+I am writing regarding your opening for Python + SQL Software Engineer. My focus is designing robust, high-concurrency backend services using FastAPI, Python, PostgreSQL, and SQLAlchemy. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
 
 A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
 • Implements asynchronous REST services with PostgreSQL and Alembic migrations.
@@ -28,7 +28,7 @@ Relevant Links:
 • GitHub: https://github.com/JunaidWarraich1
 • LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
 
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Proxify AB's current technical roadmap.
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Multiply's current technical roadmap.
 
 Best regards,
 Muhammad Junaid Warraich
@@ -40,9 +40,47 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 2. Backend Engineers, Sr - Close (Match: 110%)
+### 2. Software Engineer - Direct Tech Founder (Match: 115%)
+- **Focus:** Full-Stack (Python & React)
+- **Source:** Direct Employer (Hacker News)
+- **Apply URL:** https://news.ycombinator.com/item?id=49935441
+- **Matched Keywords:** FastAPI, Python, PostgreSQL, React
+
+<details><summary>Tailored Proposal</summary>
+
+```
+Subject: Software Engineer Application - Muhammad Junaid Warraich
+
+Hi Direct Tech Founder Hiring Team,
+
+I am writing regarding your opening for Software Engineer. I specialize in end-to-end systems with FastAPI, Python, PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Direct Tech Founder's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+
+```
+</details>
+
+---
+
+### 3. Backend Engineers, Sr - Close (Match: 110%)
 - **Focus:** Backend (Python & PostgreSQL)
-- **Source:** Hacker News (Direct Contact)
+- **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://close.com/careers
 - **Matched Keywords:** FastAPI, Python, PostgreSQL, Backend
 
@@ -78,20 +116,20 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 3. Senior React Full-stack Developer - Lemon.io (Match: 95%)
-- **Focus:** Full-Stack (Python & React)
-- **Source:** WeWorkRemotely (Free Apply)
-- **Apply URL:** https://weworkremotely.com/remote-jobs/lemon-io-senior-react-full-stack-developer-7
-- **Matched Keywords:** Python, React, Full-Stack
+### 4. Software Engineer - Direct Tech Founder (Match: 105%)
+- **Focus:** Backend (Python & PostgreSQL)
+- **Source:** Direct Employer (Hacker News)
+- **Apply URL:** https://close.com
+- **Matched Keywords:** FastAPI, Python, PostgreSQL, Docker
 
 <details><summary>Tailored Proposal</summary>
 
 ```
-Subject: Senior React Full-stack Developer Application - Muhammad Junaid Warraich
+Subject: Software Engineer Application - Muhammad Junaid Warraich
 
-Hi Lemon.io Hiring Team,
+Hi Direct Tech Founder Hiring Team,
 
-I am writing regarding your opening for Senior React Full-stack Developer. I specialize in end-to-end systems with Python, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+I am writing regarding your opening for Software Engineer. My focus is designing robust, high-concurrency backend services using FastAPI, Python, PostgreSQL, and Docker. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
 
 A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
 • Implements asynchronous REST services with PostgreSQL and Alembic migrations.
@@ -104,7 +142,7 @@ Relevant Links:
 • GitHub: https://github.com/JunaidWarraich1
 • LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
 
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Lemon.io's current technical roadmap.
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Direct Tech Founder's current technical roadmap.
 
 Best regards,
 Muhammad Junaid Warraich
@@ -116,9 +154,47 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 4. Senior Backend Engineer, Medical Data Pipeline (Python + Rust) - NeuralFrame (Match: 95%)
+### 5. Full Stack Developer (Java + Angular/React) - Avision GmbH (Match: 100%)
+- **Focus:** Full-Stack (Python & React)
+- **Source:** Direct Employer (Hacker News)
+- **Apply URL:** https://news.ycombinator.com/item?id=49933038
+- **Matched Keywords:** PostgreSQL, React, Docker, Full-Stack
+
+<details><summary>Tailored Proposal</summary>
+
+```
+Subject: Full Stack Developer (Java + Angular/React) Application - Muhammad Junaid Warraich
+
+Hi Avision GmbH Hiring Team,
+
+I am writing regarding your opening for Full Stack Developer (Java + Angular/React). I specialize in end-to-end systems with PostgreSQL, React 18, and Docker. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Avision GmbH's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+
+```
+</details>
+
+---
+
+### 6. Senior Backend Engineer, Medical Data Pipeline (Python + Rust) - NeuralFrame (Match: 95%)
 - **Focus:** Backend (Python & PostgreSQL)
-- **Source:** Hacker News (Direct Contact)
+- **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://wellfound.com/jobs/4829721-senior-backend-software-engineer-medical-data-pipeline
 - **Matched Keywords:** Python, PostgreSQL, Backend
 
@@ -154,9 +230,9 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 5. Staff Full-Stack Engineer, Quality & Delivery - Propel Labs (Match: 95%)
+### 7. Staff Full-Stack Engineer, Quality & Delivery - Propel Labs (Match: 95%)
 - **Focus:** Full-Stack (Python & React)
-- **Source:** Hacker News (Direct Contact)
+- **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://propellabs.ai
 - **Matched Keywords:** Python, PostgreSQL, React, Full-Stack
 
@@ -192,9 +268,123 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 6. Software Engineer - Direct Tech Founder (Match: 90%)
+### 8. Founding Engineer, Forward Deployed (full-stack) - Opaxa (Match: 95%)
+- **Focus:** Full-Stack (Python & React)
+- **Source:** Direct Employer (Hacker News)
+- **Apply URL:** mailto:colton@opaxa.com?subject=Founding Engineer, Forward Deployed (full-stack) Application - Muhammad Junaid Warraich
+- **Matched Keywords:** Python, PostgreSQL, React, Full-Stack
+
+<details><summary>Tailored Proposal</summary>
+
+```
+Subject: Founding Engineer, Forward Deployed (full-stack) Application - Muhammad Junaid Warraich
+
+Hi Opaxa Hiring Team,
+
+I am writing regarding your opening for Founding Engineer, Forward Deployed (full-stack). I specialize in end-to-end systems with Python, PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Opaxa's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+
+```
+</details>
+
+---
+
+### 9. Product Engineer (Product Manager role, not a Full-stack role) - Search Atlas (Match: 95%)
+- **Focus:** Full-Stack (Python & React)
+- **Source:** Direct Employer (Hacker News)
+- **Apply URL:** https://careers.searchatlas.com/jobs/599248-product-engineer-pm
+- **Matched Keywords:** Python, PostgreSQL, React, Full-Stack
+
+<details><summary>Tailored Proposal</summary>
+
+```
+Subject: Product Engineer (Product Manager role, not a Full-stack role) Application - Muhammad Junaid Warraich
+
+Hi Search Atlas Hiring Team,
+
+I am writing regarding your opening for Product Engineer (Product Manager role, not a Full-stack role). I specialize in end-to-end systems with Python, PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Search Atlas's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+
+```
+</details>
+
+---
+
+### 10. Product Engineer (Product Manager role, not a Full-stack role) - Search Atlas (Match: 95%)
+- **Focus:** Full-Stack (Python & React)
+- **Source:** Direct Employer (Hacker News)
+- **Apply URL:** https://careers.searchatlas.com/jobs/599248-product-engineer-pm
+- **Matched Keywords:** Python, PostgreSQL, React, Full-Stack
+
+<details><summary>Tailored Proposal</summary>
+
+```
+Subject: Product Engineer (Product Manager role, not a Full-stack role) Application - Muhammad Junaid Warraich
+
+Hi Search Atlas Hiring Team,
+
+I am writing regarding your opening for Product Engineer (Product Manager role, not a Full-stack role). I specialize in end-to-end systems with Python, PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Search Atlas's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+
+```
+</details>
+
+---
+
+### 11. Software Engineer - Direct Tech Founder (Match: 90%)
 - **Focus:** Backend (Python & PostgreSQL)
-- **Source:** Hacker News (Direct Contact)
+- **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://wagnermatos.co.uk
 - **Matched Keywords:** FastAPI, Python, PostgreSQL
 
@@ -230,20 +420,20 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 7. Senior Fullstack Developer (React.js / Node.js) - Proxify AB (Match: 85%)
-- **Focus:** Full-Stack (Python & React)
-- **Source:** WeWorkRemotely (Free Apply)
-- **Apply URL:** https://weworkremotely.com/remote-jobs/proxify-ab-senior-fullstack-developer-react-js-node-js-5
-- **Matched Keywords:** PostgreSQL, React, Full-Stack
+### 12. REMOTE (EMEA/APAC) We're looking for Python backend engineers to work on a trustless supercluster of performance-proofed GPU-enabled sandboxed docker container runners controlled by truly decentralized algorithms (not just PAXOS or RAFT) - Senior Python Backend Engineer (Match: 90%)
+- **Focus:** Backend (Python & PostgreSQL)
+- **Source:** Direct Employer (Hacker News)
+- **Apply URL:** https://careers.reef.pl/?utm_source=hackernews
+- **Matched Keywords:** Python, Docker, Backend
 
 <details><summary>Tailored Proposal</summary>
 
 ```
-Subject: Senior Fullstack Developer (React.js / Node.js) Application - Muhammad Junaid Warraich
+Subject: REMOTE (EMEA/APAC) We're looking for Python backend engineers to work on a trustless supercluster of performance-proofed GPU-enabled sandboxed docker container runners controlled by truly decentralized algorithms (not just PAXOS or RAFT) Application - Muhammad Junaid Warraich
 
-Hi Proxify AB Hiring Team,
+Hi Senior Python Backend Engineer Hiring Team,
 
-I am writing regarding your opening for Senior Fullstack Developer (React.js / Node.js). I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+I am writing regarding your opening for REMOTE (EMEA/APAC) We're looking for Python backend engineers to work on a trustless supercluster of performance-proofed GPU-enabled sandboxed docker container runners controlled by truly decentralized algorithms (not just PAXOS or RAFT). My focus is designing robust, high-concurrency backend services using Python, and Docker. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
 
 A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
 • Implements asynchronous REST services with PostgreSQL and Alembic migrations.
@@ -256,7 +446,7 @@ Relevant Links:
 • GitHub: https://github.com/JunaidWarraich1
 • LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
 
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Proxify AB's current technical roadmap.
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Senior Python Backend Engineer's current technical roadmap.
 
 Best regards,
 Muhammad Junaid Warraich
@@ -268,9 +458,9 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 8. Staff Backend Engineer - Hatch (Match: 85%)
+### 13. Staff Backend Engineer - Hatch (Match: 85%)
 - **Focus:** Backend (Python & PostgreSQL)
-- **Source:** Hacker News (Direct Contact)
+- **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://hatch.co
 - **Matched Keywords:** Python, PostgreSQL, Docker, Backend
 
@@ -306,20 +496,20 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 9. Full-Stack E-commerce Developer with Sage X3 Experience - Toptal (Match: 70%)
+### 14. Backend Software Engineer - Enveritas (YC S18, non-profit) (Match: 85%)
 - **Focus:** Backend (Python & PostgreSQL)
-- **Source:** WeWorkRemotely (Free Apply)
-- **Apply URL:** https://weworkremotely.com/remote-jobs/toptal-full-stack-e-commerce-developer-with-sage-x3-experience
-- **Matched Keywords:** Python, PostgreSQL, Full-Stack
+- **Source:** Direct Employer (Hacker News)
+- **Apply URL:** https://enveritas.org/jobs/
+- **Matched Keywords:** Python, PostgreSQL, Docker, Backend
 
 <details><summary>Tailored Proposal</summary>
 
 ```
-Subject: Full-Stack E-commerce Developer with Sage X3 Experience Application - Muhammad Junaid Warraich
+Subject: Backend Software Engineer Application - Muhammad Junaid Warraich
 
-Hi Toptal Hiring Team,
+Hi Enveritas (YC S18, non-profit) Hiring Team,
 
-I am writing regarding your opening for Full-Stack E-commerce Developer with Sage X3 Experience. My focus is designing robust, high-concurrency backend services using Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
+I am writing regarding your opening for Backend Software Engineer. My focus is designing robust, high-concurrency backend services using Python, PostgreSQL, and Docker. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
 
 A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
 • Implements asynchronous REST services with PostgreSQL and Alembic migrations.
@@ -332,7 +522,7 @@ Relevant Links:
 • GitHub: https://github.com/JunaidWarraich1
 • LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
 
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Toptal's current technical roadmap.
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Enveritas (YC S18, non-profit)'s current technical roadmap.
 
 Best regards,
 Muhammad Junaid Warraich
@@ -344,58 +534,20 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 10. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (Match: 70%)
-- **Focus:** Backend (Python & PostgreSQL)
-- **Source:** Hacker News (Direct Contact)
-- **Apply URL:** https://radar.com
-- **Matched Keywords:** Python, Backend, Full-Stack
-
-<details><summary>Tailored Proposal</summary>
-
-```
-Subject: Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) Application - Muhammad Junaid Warraich
-
-Hi Radar Labs Hiring Team,
-
-I am writing regarding your opening for Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA). My focus is designing robust, high-concurrency backend services using Python. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
-
-A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
-• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
-• Enforces zero privilege escalation through decoupled role management and schema validation.
-• Includes full test suites with Pytest and automated Docker deployments.
-
-Relevant Links:
-• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
-• Flagship System: https://workflow-pro-ebon.vercel.app/
-• GitHub: https://github.com/JunaidWarraich1
-• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
-
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Radar Labs's current technical roadmap.
-
-Best regards,
-Muhammad Junaid Warraich
-Full-Stack & Backend Systems Engineer
-+92 348 1064513 | j.warraich2004@gmail.com
-
-```
-</details>
-
----
-
-### 11. FULL TIME: Software Engineer Position - React and Rest - Yooli (Match: 65%)
+### 15. 2 Full Stack AI Engineer, 1 GTM - Interview Resources (Match: 80%)
 - **Focus:** Full-Stack (Python & React)
-- **Source:** WeWorkRemotely (Free Apply)
-- **Apply URL:** https://weworkremotely.com/remote-jobs/yooli-full-time-software-engineer-position-react-and-rest-1
-- **Matched Keywords:** PostgreSQL, React
+- **Source:** Direct Employer (Hacker News)
+- **Apply URL:** https://www.interviewresources.app/careers
+- **Matched Keywords:** PostgreSQL, React, Docker, Full-Stack
 
 <details><summary>Tailored Proposal</summary>
 
 ```
-Subject: FULL TIME: Software Engineer Position - React and Rest Application - Muhammad Junaid Warraich
+Subject: 2 Full Stack AI Engineer, 1 GTM Application - Muhammad Junaid Warraich
 
-Hi Yooli Hiring Team,
+Hi Interview Resources Hiring Team,
 
-I am writing regarding your opening for FULL TIME: Software Engineer Position - React and Rest. I specialize in end-to-end systems with PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+I am writing regarding your opening for 2 Full Stack AI Engineer, 1 GTM. I specialize in end-to-end systems with PostgreSQL, React 18, and Docker. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
 
 A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
 • Implements asynchronous REST services with PostgreSQL and Alembic migrations.
@@ -408,159 +560,7 @@ Relevant Links:
 • GitHub: https://github.com/JunaidWarraich1
 • LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
 
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Yooli's current technical roadmap.
-
-Best regards,
-Muhammad Junaid Warraich
-Full-Stack & Backend Systems Engineer
-+92 348 1064513 | j.warraich2004@gmail.com
-
-```
-</details>
-
----
-
-### 12. Full-stack Engineer (Elixir, Phoenix LiveView, React) - Treat Health (Match: 65%)
-- **Focus:** Frontend (React & UI Systems)
-- **Source:** Hacker News (Direct Contact)
-- **Apply URL:** https://treat.health/en/careers/full-stack-engineer/
-- **Matched Keywords:** React, Full-Stack
-
-<details><summary>Tailored Proposal</summary>
-
-```
-Subject: Full-stack Engineer (Elixir, Phoenix LiveView, React) Application - Muhammad Junaid Warraich
-
-Hi Treat Health Hiring Team,
-
-I am writing regarding your opening for Full-stack Engineer (Elixir, Phoenix LiveView, React). I deliver production-grade software using React 18, emphasizing clean architecture, containerized deployments, and high test reliability.
-
-A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
-• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
-• Enforces zero privilege escalation through decoupled role management and schema validation.
-• Includes full test suites with Pytest and automated Docker deployments.
-
-Relevant Links:
-• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
-• Flagship System: https://workflow-pro-ebon.vercel.app/
-• GitHub: https://github.com/JunaidWarraich1
-• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
-
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Treat Health's current technical roadmap.
-
-Best regards,
-Muhammad Junaid Warraich
-Full-Stack & Backend Systems Engineer
-+92 348 1064513 | j.warraich2004@gmail.com
-
-```
-</details>
-
----
-
-### 13. Senior Software Engineer, Data - Doximity (Match: 50%)
-- **Focus:** Backend (Python & PostgreSQL)
-- **Source:** WeWorkRemotely (Free Apply)
-- **Apply URL:** https://weworkremotely.com/remote-jobs/doximity-senior-software-engineer-data
-- **Matched Keywords:** Python, PostgreSQL
-
-<details><summary>Tailored Proposal</summary>
-
-```
-Subject: Senior Software Engineer, Data Application - Muhammad Junaid Warraich
-
-Hi Doximity Hiring Team,
-
-I am writing regarding your opening for Senior Software Engineer, Data. My focus is designing robust, high-concurrency backend services using Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
-
-A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
-• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
-• Enforces zero privilege escalation through decoupled role management and schema validation.
-• Includes full test suites with Pytest and automated Docker deployments.
-
-Relevant Links:
-• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
-• Flagship System: https://workflow-pro-ebon.vercel.app/
-• GitHub: https://github.com/JunaidWarraich1
-• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
-
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Doximity's current technical roadmap.
-
-Best regards,
-Muhammad Junaid Warraich
-Full-Stack & Backend Systems Engineer
-+92 348 1064513 | j.warraich2004@gmail.com
-
-```
-</details>
-
----
-
-### 14. Software Developer - Odoo (Match: 50%)
-- **Focus:** Backend (Python & PostgreSQL)
-- **Source:** Hacker News (Direct Contact)
-- **Apply URL:** https://www.odoo.com/r/4zN
-- **Matched Keywords:** Python, PostgreSQL
-
-<details><summary>Tailored Proposal</summary>
-
-```
-Subject: Software Developer Application - Muhammad Junaid Warraich
-
-Hi Odoo Hiring Team,
-
-I am writing regarding your opening for Software Developer. My focus is designing robust, high-concurrency backend services using Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
-
-A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
-• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
-• Enforces zero privilege escalation through decoupled role management and schema validation.
-• Includes full test suites with Pytest and automated Docker deployments.
-
-Relevant Links:
-• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
-• Flagship System: https://workflow-pro-ebon.vercel.app/
-• GitHub: https://github.com/JunaidWarraich1
-• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
-
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Odoo's current technical roadmap.
-
-Best regards,
-Muhammad Junaid Warraich
-Full-Stack & Backend Systems Engineer
-+92 348 1064513 | j.warraich2004@gmail.com
-
-```
-</details>
-
----
-
-### 15. Engineering Manager, Data Platform (NYC, Hybrid) We’re a Series B trading technology company reimagining how financial markets match buyers and sellers -- applying auction theory and innovative technologies to build fairer, more efficient trading infrastructure - OneChronos (Match: 50%)
-- **Focus:** Backend (Python & PostgreSQL)
-- **Source:** Hacker News (Direct Contact)
-- **Apply URL:** https://news.ycombinator.com/item?id=50012248
-- **Matched Keywords:** Python, PostgreSQL
-
-<details><summary>Tailored Proposal</summary>
-
-```
-Subject: Engineering Manager, Data Platform (NYC, Hybrid) We’re a Series B trading technology company reimagining how financial markets match buyers and sellers -- applying auction theory and innovative technologies to build fairer, more efficient trading infrastructure Application - Muhammad Junaid Warraich
-
-Hi OneChronos Hiring Team,
-
-I am writing regarding your opening for Engineering Manager, Data Platform (NYC, Hybrid) We’re a Series B trading technology company reimagining how financial markets match buyers and sellers -- applying auction theory and innovative technologies to build fairer, more efficient trading infrastructure. My focus is designing robust, high-concurrency backend services using Python, and PostgreSQL. I prioritize zero unhandled exceptions, row-level pessimistic locking for transactions, and strict validation to eliminate 500 errors before they reach production.
-
-A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
-• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
-• Enforces zero privilege escalation through decoupled role management and schema validation.
-• Includes full test suites with Pytest and automated Docker deployments.
-
-Relevant Links:
-• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
-• Flagship System: https://workflow-pro-ebon.vercel.app/
-• GitHub: https://github.com/JunaidWarraich1
-• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
-
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with OneChronos's current technical roadmap.
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Interview Resources's current technical roadmap.
 
 Best regards,
 Muhammad Junaid Warraich

@@ -1,5 +1,6 @@
 """Free-to-apply feed retrieval module for engineering opportunities.
-All sources included here are 100% free for candidates (no paywalls, no subscriptions).
+Strict Invariant: Zero candidate paywalls or subscription traps.
+Only direct employer career portals (Greenhouse, Lever, Ashby, direct emails) are fetched.
 """
 
 import html
@@ -26,49 +27,6 @@ def clean_html(raw_html: str) -> str:
     return clean_text.strip()
 
 
-def fetch_weworkremotely(url: str, category_name: str) -> List[Dict[str, Any]]:
-    """
-    Fetch opportunities from WeWorkRemotely RSS feeds.
-    Applying is 100% free on WWR (redirects directly to company ATS or email).
-    """
-    jobs: List[Dict[str, Any]] = []
-    try:
-        req = urllib.request.Request(url, headers=DEFAULT_HEADERS)
-        with urllib.request.urlopen(req, timeout=12) as response:
-            xml_data = response.read()
-            root = ET.fromstring(xml_data)
-            for item in root.findall(".//item"):
-                title_elem = item.find("title")
-                link_elem = item.find("link")
-                desc_elem = item.find("description")
-                guid_elem = item.find("guid")
-
-                title = title_elem.text if title_elem is not None and title_elem.text else ""
-                link = link_elem.text if link_elem is not None and link_elem.text else ""
-                description = clean_html(desc_elem.text if desc_elem is not None and desc_elem.text else "")
-                guid = guid_elem.text if guid_elem is not None and guid_elem.text else link
-
-                company = "Hiring Team"
-                if ":" in title:
-                    parts = title.split(":", 1)
-                    company = parts[0].strip()
-                    title = parts[1].strip()
-
-                if title and link:
-                    jobs.append({
-                        "id": f"wwr_{guid}",
-                        "title": title,
-                        "company": company,
-                        "url": link,
-                        "description": description[:1500],
-                        "tags": [category_name.lower()],
-                        "source": "WeWorkRemotely (Free Apply)"
-                    })
-    except Exception as exc:
-        print(f"[Warning] WeWorkRemotely ({category_name}) fetch failed: {exc}")
-    return jobs
-
-
 def fetch_himalayas(url: str) -> List[Dict[str, Any]]:
     """
     Fetch from Himalayas RSS feed.
@@ -91,7 +49,7 @@ def fetch_himalayas(url: str) -> List[Dict[str, Any]]:
                 description = clean_html(desc_elem.text if desc_elem is not None and desc_elem.text else "")
                 guid = guid_elem.text if guid_elem is not None and guid_elem.text else link
 
-                company = "Himalayas Partner"
+                company = "Hiring Team"
                 if " at " in title:
                     parts = title.split(" at ", 1)
                     title = parts[0].strip()
@@ -104,8 +62,8 @@ def fetch_himalayas(url: str) -> List[Dict[str, Any]]:
                         "company": company,
                         "url": link,
                         "description": description[:1500],
-                        "tags": [],
-                        "source": "Himalayas (Free Apply)"
+                        "tags": ["remote"],
+                        "source": "Direct Company Portal (Free Apply)"
                     })
     except Exception as exc:
         print(f"[Warning] Himalayas fetch failed: {exc}")
@@ -125,7 +83,7 @@ def fetch_remotive(url: str) -> List[Dict[str, Any]]:
             items = data.get("jobs", [])
             for item in items:
                 title = item.get("title", "")
-                company = item.get("company_name", "Remotive Partner")
+                company = item.get("company_name", "Engineering Team")
                 link = item.get("url", "")
                 description = clean_html(item.get("description", ""))
                 tags = item.get("tags", [])
@@ -137,7 +95,7 @@ def fetch_remotive(url: str) -> List[Dict[str, Any]]:
                         "url": link,
                         "description": description[:1500],
                         "tags": [str(t).lower() for t in tags] if isinstance(tags, list) else [],
-                        "source": "Remotive (Free Apply)"
+                        "source": "Direct Company Portal (Free Apply)"
                     })
     except Exception as exc:
         print(f"[Warning] Remotive fetch failed: {exc}")
@@ -153,7 +111,7 @@ def fetch_hacker_news(story_ids: List[str]) -> List[Dict[str, Any]]:
     jobs: List[Dict[str, Any]] = []
     for s_id in story_ids:
         try:
-            api_url = f"https://hn.algolia.com/api/v1/search?tags=comment,story_{s_id}&hitsPerPage=100"
+            api_url = f"https://hn.algolia.com/api/v1/search?tags=comment,story_{s_id}&hitsPerPage=200"
             req = urllib.request.Request(api_url, headers=DEFAULT_HEADERS)
             with urllib.request.urlopen(req, timeout=12) as response:
                 data = json.loads(response.read().decode("utf-8"))
@@ -206,7 +164,7 @@ def fetch_hacker_news(story_ids: List[str]) -> List[Dict[str, Any]]:
                         "url": apply_url,
                         "description": raw_text[:1500],
                         "tags": ["hacker-news", "direct-founder"],
-                        "source": "Hacker News (Direct Contact)"
+                        "source": "Direct Employer (Hacker News)"
                     })
         except Exception as exc:
             print(f"[Warning] HN thread {s_id} fetch failed: {exc}")
@@ -214,32 +172,18 @@ def fetch_hacker_news(story_ids: List[str]) -> List[Dict[str, Any]]:
 
 
 def get_all_jobs() -> List[Dict[str, Any]]:
-    """Fetch and deduplicate across all 100% free hiring channels."""
+    """Fetch and deduplicate across all 100% free direct hiring channels."""
     all_jobs: List[Dict[str, Any]] = []
     seen_ids = set()
 
-    # 1. WeWorkRemotely (Free Apply)
-    wwr_feeds = [
-        ("wwr_backend", "Backend"),
-        ("wwr_fullstack", "Full-Stack"),
-        ("wwr_frontend", "Frontend")
-    ]
-    for key, cat in wwr_feeds:
-        url = FREE_FEEDS.get(key)
-        if url:
-            for job in fetch_weworkremotely(url, cat):
-                if job["id"] not in seen_ids:
-                    seen_ids.add(job["id"])
-                    all_jobs.append(job)
-
-    # 2. Hacker News 'Who is Hiring?' (Direct Founders/CTOs, Zero Paywalls)
+    # 1. Hacker News 'Who is Hiring?' (Direct Founders/CTOs, Zero Paywalls)
     hn_ids = FREE_FEEDS.get("hn_hiring_stories", [])
     for job in fetch_hacker_news(hn_ids):
         if job["id"] not in seen_ids:
             seen_ids.add(job["id"])
             all_jobs.append(job)
 
-    # 3. Himalayas (Direct Company Portals)
+    # 2. Himalayas (Direct Company Portals)
     himalayas_url = FREE_FEEDS.get("himalayas_remote")
     if himalayas_url:
         for job in fetch_himalayas(himalayas_url):
@@ -247,7 +191,7 @@ def get_all_jobs() -> List[Dict[str, Any]]:
                 seen_ids.add(job["id"])
                 all_jobs.append(job)
 
-    # 4. Remotive (Free Apply)
+    # 3. Remotive (Direct Company Portals)
     remotive_url = FREE_FEEDS.get("remotive_software")
     if remotive_url:
         for job in fetch_remotive(remotive_url):

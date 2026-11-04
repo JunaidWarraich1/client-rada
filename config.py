@@ -1,5 +1,6 @@
 """Configuration and candidate profile settings for Client Radar.
-Note: Only 100% free-to-apply direct platforms are included. No candidate paywalls.
+Strict Invariant: 100% direct-to-company / free-to-apply sources only.
+All middleman paywalls (RemoteOK, WeWorkRemotely Pro) are strictly excluded.
 """
 
 CANDIDATE_PROFILE = {
@@ -26,14 +27,11 @@ CANDIDATE_PROFILE = {
     ]
 }
 
-# 100% Free-to-apply employer feeds (Zero job-seeker subscriptions or paywalls)
+# 100% Direct & Free Hiring Channels (Zero Candidate Paywalls)
 FREE_FEEDS = {
-    "wwr_backend": "https://weworkremotely.com/categories/remote-back-end-programming-jobs.rss",
-    "wwr_fullstack": "https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss",
-    "wwr_frontend": "https://weworkremotely.com/categories/remote-front-end-programming-jobs.rss",
+    "hn_hiring_stories": ["50338728", "49922569", "49522897"],
     "himalayas_remote": "https://himalayas.app/jobs/rss",
-    "remotive_software": "https://remotive.com/api/remote-jobs?category=software-dev",
-    "hn_hiring_stories": ["50338728", "49922569"]
+    "remotive_software": "https://remotive.com/api/remote-jobs?category=software-dev"
 }
 
 KEYWORDS = {
