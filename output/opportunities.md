@@ -1,6 +1,6 @@
 # Client Radar: Verified Opportunities
 
-Generated: 2026-11-09 23:53
+Generated: 2026-11-10 04:55
 
 ### 1. Python + SQL Software Engineer - Multiply (Match: 135%)
 - **Focus:** Backend (Python & PostgreSQL)
