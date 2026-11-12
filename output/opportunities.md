@@ -1,6 +1,6 @@
 # Client Radar: Verified Opportunities
 
-Generated: 2026-11-11 18:56
+Generated: 2026-11-12 01:43
 
 ### 1. Python + SQL Software Engineer - Multiply (Match: 135%)
 - **Focus:** Backend (Python & PostgreSQL)
@@ -40,7 +40,45 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 2. Software Engineer / Backend Engineer - Hemant Singh (Match: 125%)
+### 2. Software Engineer - Direct Tech Founder (Match: 130%)
+- **Focus:** Full-Stack (Python & React)
+- **Source:** Direct Employer (Hacker News)
+- **Apply URL:** https://shankarpatilv.github.io/profile/
+- **Matched Keywords:** FastAPI, Python, PostgreSQL, React, Docker
+
+<details><summary>Tailored Proposal</summary>
+
+```
+Subject: Software Engineer Application - Muhammad Junaid Warraich
+
+Hi Direct Tech Founder Hiring Team,
+
+I am writing regarding your opening for Software Engineer. I specialize in end-to-end systems with FastAPI, Python, PostgreSQL, React 18, and Docker. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+
+A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
+• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
+• Enforces zero privilege escalation through decoupled role management and schema validation.
+• Includes full test suites with Pytest and automated Docker deployments.
+
+Relevant Links:
+• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
+• Flagship System: https://workflow-pro-ebon.vercel.app/
+• GitHub: https://github.com/JunaidWarraich1
+• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
+
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Direct Tech Founder's current technical roadmap.
+
+Best regards,
+Muhammad Junaid Warraich
+Full-Stack & Backend Systems Engineer
++92 348 1064513 | j.warraich2004@gmail.com
+
+```
+</details>
+
+---
+
+### 3. Software Engineer / Backend Engineer - Hemant Singh (Match: 125%)
 - **Focus:** Backend (Python & PostgreSQL)
 - **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://simply-cinema-frontend.vercel.app/
@@ -78,7 +116,7 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 3. Senior Technical Project Manager (Full Stack) - RAIDS AI (Match: 115%)
+### 4. Senior Technical Project Manager (Full Stack) - RAIDS AI (Match: 115%)
 - **Focus:** Full-Stack (Python & React)
 - **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://www.linkedin.com/jobs/view/4483409995/
@@ -116,7 +154,7 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 4. Founding MTS, Full-Stack - Polymath (Match: 115%)
+### 5. Founding MTS, Full-Stack - Polymath (Match: 115%)
 - **Focus:** Full-Stack (Python & React)
 - **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://polymathmade.com
@@ -154,7 +192,7 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 5. Software Engineer - Direct Tech Founder (Match: 115%)
+### 6. Software Engineer - Direct Tech Founder (Match: 115%)
 - **Focus:** Full-Stack (Python & React)
 - **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://news.ycombinator.com/item?id=49935441
@@ -192,7 +230,7 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 6. Backend Engineers, Sr - Close (Match: 110%)
+### 7. Backend Engineers, Sr - Close (Match: 110%)
 - **Focus:** Backend (Python & PostgreSQL)
 - **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://close.com/careers
@@ -230,7 +268,7 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 7. Software Engineer - Direct Tech Founder (Match: 105%)
+### 8. Software Engineer - Direct Tech Founder (Match: 105%)
 - **Focus:** Backend (Python & PostgreSQL)
 - **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://close.com
@@ -268,7 +306,7 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 8. Full Stack Developer (Java + Angular/React) - Avision GmbH (Match: 100%)
+### 9. Full Stack Developer (Java + Angular/React) - Avision GmbH (Match: 100%)
 - **Focus:** Full-Stack (Python & React)
 - **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://news.ycombinator.com/item?id=49933038
@@ -306,7 +344,7 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 9. Senior Backend Engineer, Medical Data Pipeline (Python + Rust) - NeuralFrame (Match: 95%)
+### 10. Senior Backend Engineer, Medical Data Pipeline (Python + Rust) - NeuralFrame (Match: 95%)
 - **Focus:** Backend (Python & PostgreSQL)
 - **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://wellfound.com/jobs/4829721-senior-backend-software-engineer-medical-data-pipeline
@@ -344,7 +382,7 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 10. Staff Full-Stack Engineer, Quality & Delivery - Propel Labs (Match: 95%)
+### 11. Staff Full-Stack Engineer, Quality & Delivery - Propel Labs (Match: 95%)
 - **Focus:** Full-Stack (Python & React)
 - **Source:** Direct Employer (Hacker News)
 - **Apply URL:** https://propellabs.ai
@@ -382,7 +420,7 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 11. Founding Engineer, Forward Deployed (full-stack) - Opaxa (Match: 95%)
+### 12. Founding Engineer, Forward Deployed (full-stack) - Opaxa (Match: 95%)
 - **Focus:** Full-Stack (Python & React)
 - **Source:** Direct Employer (Hacker News)
 - **Apply URL:** mailto:colton@opaxa.com?subject=Founding Engineer, Forward Deployed (full-stack) Application - Muhammad Junaid Warraich
@@ -409,44 +447,6 @@ Relevant Links:
 • LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
 
 I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Opaxa's current technical roadmap.
-
-Best regards,
-Muhammad Junaid Warraich
-Full-Stack & Backend Systems Engineer
-+92 348 1064513 | j.warraich2004@gmail.com
-
-```
-</details>
-
----
-
-### 12. Product Engineer (Product Manager role, not a Full-stack role) - Search Atlas (Match: 95%)
-- **Focus:** Full-Stack (Python & React)
-- **Source:** Direct Employer (Hacker News)
-- **Apply URL:** https://careers.searchatlas.com/jobs/599248-product-engineer-pm
-- **Matched Keywords:** Python, PostgreSQL, React, Full-Stack
-
-<details><summary>Tailored Proposal</summary>
-
-```
-Subject: Product Engineer (Product Manager role, not a Full-stack role) Application - Muhammad Junaid Warraich
-
-Hi Search Atlas Hiring Team,
-
-I am writing regarding your opening for Product Engineer (Product Manager role, not a Full-stack role). I specialize in end-to-end systems with Python, PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
-
-A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
-• Implements asynchronous REST services with PostgreSQL and Alembic migrations.
-• Enforces zero privilege escalation through decoupled role management and schema validation.
-• Includes full test suites with Pytest and automated Docker deployments.
-
-Relevant Links:
-• Live Portfolio: https://myportfolio-seven-eta-43.vercel.app/
-• Flagship System: https://workflow-pro-ebon.vercel.app/
-• GitHub: https://github.com/JunaidWarraich1
-• LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
-
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Search Atlas's current technical roadmap.
 
 Best regards,
 Muhammad Junaid Warraich
@@ -496,20 +496,20 @@ Full-Stack & Backend Systems Engineer
 
 ---
 
-### 14. Software Engineer - Direct Tech Founder (Match: 90%)
+### 14. Product Engineer (Product Manager role, not a Full-stack role) - Search Atlas (Match: 95%)
 - **Focus:** Full-Stack (Python & React)
 - **Source:** Direct Employer (Hacker News)
-- **Apply URL:** https://drive.google.com/file/d/1kHPNmquEQniZlqC8bJYhCKPTztCPh9Q6/view
-- **Matched Keywords:** Python, PostgreSQL, React, Docker
+- **Apply URL:** https://careers.searchatlas.com/jobs/599248-product-engineer-pm
+- **Matched Keywords:** Python, PostgreSQL, React, Full-Stack
 
 <details><summary>Tailored Proposal</summary>
 
 ```
-Subject: Software Engineer Application - Muhammad Junaid Warraich
+Subject: Product Engineer (Product Manager role, not a Full-stack role) Application - Muhammad Junaid Warraich
 
-Hi Direct Tech Founder Hiring Team,
+Hi Search Atlas Hiring Team,
 
-I am writing regarding your opening for Software Engineer. I specialize in end-to-end systems with Python, PostgreSQL, React 18, and Docker. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
+I am writing regarding your opening for Product Engineer (Product Manager role, not a Full-stack role). I specialize in end-to-end systems with Python, PostgreSQL, and React 18. I build decoupled, type-safe architectures with clean REST schemas, responsive Tailwind layouts, and automated test coverage across both layers.
 
 A representative example of my architectural standards is my flagship system, WorkFlow Pro (https://workflow-pro-ebon.vercel.app/):
 • Implements asynchronous REST services with PostgreSQL and Alembic migrations.
@@ -522,7 +522,7 @@ Relevant Links:
 • GitHub: https://github.com/JunaidWarraich1
 • LinkedIn: https://www.linkedin.com/in/muhammad-junaid-warraich-dev
 
-I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Direct Tech Founder's current technical roadmap.
+I would welcome a brief conversation to discuss how my backend and systems engineering background aligns with Search Atlas's current technical roadmap.
 
 Best regards,
 Muhammad Junaid Warraich
@@ -537,7 +537,7 @@ Full-Stack & Backend Systems Engineer
 ### 15. Software Engineer - Direct Tech Founder (Match: 90%)
 - **Focus:** Full-Stack (Python & React)
 - **Source:** Direct Employer (Hacker News)
-- **Apply URL:** https://www.rajneeshcodex.xyz
+- **Apply URL:** https://drive.google.com/file/d/1kHPNmquEQniZlqC8bJYhCKPTztCPh9Q6/view
 - **Matched Keywords:** Python, PostgreSQL, React, Docker
 
 <details><summary>Tailored Proposal</summary>
