@@ -1,6 +1,11 @@
 name: Client Radar Opportunity Scanner
 
 on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'output/**'
   schedule:
     # Automatically scans every 4 hours throughout the day (Pakistan Time: 4 AM, 8 AM, 12 PM, 4 PM, 8 PM)
     - cron: '0 */4 * * *'
