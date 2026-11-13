@@ -1,6 +1,6 @@
 # Client Radar: Direct Remote Opportunities
 
-Updated: 2026-11-12 19:22 UTC
+Updated: 2026-11-13 00:46 UTC
 
 ### 1. Python Backend Engineer - Uvik Software (100% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
@@ -116,7 +116,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 7. Security Engineer + Data Engineer - GovStar (50% Match | Remote (Unrestricted) | 9d ago)
+### 7. Security Engineer + Data Engineer - GovStar (50% Match | Remote (Unrestricted) | 10d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** mailto:nicholas.hanson@govstar.us
 - **Matched Skills:** Python, PostgreSQL, Docker
@@ -439,7 +439,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 24. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 8d ago)
+### 24. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 9d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://radar.com/jobs#jobs
 - **Matched Skills:** Python, TypeScript
