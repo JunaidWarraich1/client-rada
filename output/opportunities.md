@@ -1,6 +1,6 @@
 # Client Radar: Direct Remote Opportunities
 
-Updated: 2026-11-14 11:01 UTC
+Updated: 2026-11-14 17:23 UTC
 
 ### 1. Python Backend Engineer - Uvik Software (100% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
@@ -78,7 +78,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 5. SDK Engineer - Python - Supabase (56% Match | Worldwide | 28d ago)
+### 5. SDK Engineer - Python - Supabase (56% Match | Worldwide | 29d ago)
 - **Source:** Direct ATS (Ashby)
 - **Apply URL:** https://jobs.ashbyhq.com/supabase/b65287c7-2071-4bc6-8717-58c090e2a372/application
 - **Matched Skills:** Python, PostgreSQL
@@ -154,7 +154,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 9. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 4d ago)
+### 9. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 5d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://forms.gle/yJAabKvLKtJmfz21A
 - **Matched Skills:** PostgreSQL, React, TypeScript
