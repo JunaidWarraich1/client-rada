@@ -1,6 +1,6 @@
 # Client Radar: Direct Remote Opportunities
 
-Updated: 2026-11-15 11:36 UTC
+Updated: 2026-11-15 18:04 UTC
 
 ### 1. Python Backend Engineer - Uvik Software (100% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
@@ -21,26 +21,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 2. Software Engineer (Remote) - Softech Associate (92% Match | Remote (Unrestricted) | Active)
-- **Source:** Python.org Official Board
-- **Apply URL:** https://softechassociate.com
-- **Matched Skills:** FastAPI, Python, PostgreSQL, React, TypeScript
-
-```
-Hi Softech Associate team,
-
-I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Software Engineer (Remote) role. I specialize in production FastAPI, Python, PostgreSQL, React 18, and TypeScript APIs that power asynchronous AI workflows, structured JSON validation, and low-latency streaming services.
-
-You can inspect my live production system (WorkFlow Pro: https://workflow-pro-ebon.vercel.app/) and portfolio (https://myportfolio-seven-eta-43.vercel.app/) or code on GitHub (https://github.com/JunaidWarraich1).
-
-Available immediately for remote collaboration with strong EMEA/APAC/US overlap.
-Best,
-Muhammad Junaid Warraich | j.warraich2004@gmail.com
-```
-
----
-
-### 3. Software Engineer, Full Stack (Python, Java, Rust, C#, C++) - Gridnaut Recruiting (64% Match | Worldwide | Active)
+### 2. Software Engineer, Full Stack (Python, Java, Rust, C#, C++) - Gridnaut Recruiting (64% Match | Worldwide | Active)
 - **Source:** Python.org Official Board
 - **Apply URL:** https://gridnaut.site/jobs/software-engineer-full-stack-python-java-rust-c-cpp/
 - **Matched Skills:** Python, React
@@ -59,7 +40,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 4. SENIOR Back-End Python Engineer - FULLY REMOTE-WORLDWIDE - ActivePrime (72% Match | Worldwide | Active)
+### 3. SENIOR Back-End Python Engineer - FULLY REMOTE-WORLDWIDE - ActivePrime (72% Match | Worldwide | Active)
 - **Source:** Python.org Official Board
 - **Apply URL:** https://www.activeprime.com/
 - **Matched Skills:** Python, PostgreSQL, REST / Pytest
@@ -78,7 +59,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 5. SDK Engineer - Python - Supabase (56% Match | Worldwide | 29d ago)
+### 4. SDK Engineer - Python - Supabase (56% Match | Worldwide | 30d ago)
 - **Source:** Direct ATS (Ashby)
 - **Apply URL:** https://jobs.ashbyhq.com/supabase/b65287c7-2071-4bc6-8717-58c090e2a372/application
 - **Matched Skills:** Python, PostgreSQL
@@ -97,7 +78,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 6. Security Engineer + Data Engineer - GovStar (50% Match | Remote (Unrestricted) | 12d ago)
+### 5. Security Engineer + Data Engineer - GovStar (50% Match | Remote (Unrestricted) | 12d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** mailto:nicholas.hanson@govstar.us
 - **Matched Skills:** Python, PostgreSQL, Docker
@@ -116,7 +97,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 7. Founding Engineer - BuildQ (58% Match | Remote (Unrestricted) | 8d ago)
+### 6. Founding Engineer - BuildQ (58% Match | Remote (Unrestricted) | 8d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://buildq.ai/careers/founding-engineer
 - **Matched Skills:** Python, PostgreSQL, React
@@ -135,26 +116,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 8. Python/DevOps Engineer - NordVpn/NordSecurity (48% Match | Worldwide | Active)
-- **Source:** Python.org Official Board
-- **Apply URL:** https://nordsecurity.com/
-- **Matched Skills:** Python, Docker
-
-```
-Hi NordVpn/NordSecurity team,
-
-I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Python/DevOps Engineer role. With a dual background in Computer Science and Law (LLB), I pair Python and Docker engineering with rigorous RBAC isolation, strict input validation, and audit-ready API architecture.
-
-You can inspect my live production system (WorkFlow Pro: https://workflow-pro-ebon.vercel.app/) and portfolio (https://myportfolio-seven-eta-43.vercel.app/) or code on GitHub (https://github.com/JunaidWarraich1).
-
-Available immediately for remote collaboration with strong EMEA/APAC/US overlap.
-Best,
-Muhammad Junaid Warraich | j.warraich2004@gmail.com
-```
-
----
-
-### 9. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 5d ago)
+### 7. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 6d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://forms.gle/yJAabKvLKtJmfz21A
 - **Matched Skills:** PostgreSQL, React, TypeScript
@@ -173,7 +135,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 10. Distributed Systems Testing Software Engineer, Python / Go - Canonical (40% Match | Worldwide | Active ATS)
+### 8. Distributed Systems Testing Software Engineer, Python / Go - Canonical (40% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/2969042
 - **Matched Skills:** Python
@@ -192,7 +154,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 11. Software Engineer - Python - Container Images - Canonical (40% Match | Worldwide | Active ATS)
+### 9. Software Engineer - Python - Container Images - Canonical (40% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/6222476
 - **Matched Skills:** Python
@@ -211,7 +173,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 12. Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics - Canonical (40% Match | Worldwide | Active ATS)
+### 10. Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics - Canonical (40% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/5703396
 - **Matched Skills:** Python
@@ -230,7 +192,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 13. Python Engineer - Canonical (40% Match | Worldwide | Active ATS)
+### 11. Python Engineer - Canonical (40% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/5143074
 - **Matched Skills:** Python
@@ -249,7 +211,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 14. Python Engineer - Data Center Hardware Integration (Taipei) - Canonical (40% Match | Worldwide | Active ATS)
+### 12. Python Engineer - Data Center Hardware Integration (Taipei) - Canonical (40% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/4536726
 - **Matched Skills:** Python
@@ -268,7 +230,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 15. Python Software Engineer, Commercial Systems - Canonical (40% Match | Worldwide | Active ATS)
+### 13. Python Software Engineer, Commercial Systems - Canonical (40% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/6401160
 - **Matched Skills:** Python
@@ -287,7 +249,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 16. Software Engineer - Python and K8s - Canonical (40% Match | Worldwide | Active ATS)
+### 14. Software Engineer - Python and K8s - Canonical (40% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/3752633
 - **Matched Skills:** Python
@@ -306,7 +268,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 17. Software Engineer - Python/Golang - Kubernetes - Canonical (40% Match | Worldwide | Active ATS)
+### 15. Software Engineer - Python/Golang - Kubernetes - Canonical (40% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/2928962
 - **Matched Skills:** Python
@@ -325,7 +287,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 18. Python developer - Eleks (54% Match | Remote (Unrestricted) | Active)
+### 16. Python developer - Eleks (54% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
 - **Apply URL:** https://eleks.com/
 - **Matched Skills:** Python, REST / Pytest
@@ -344,7 +306,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 19. Python Software Engineer - Ubuntu Hardware Certification Team - Canonical (40% Match | EMEA / APAC | Active ATS)
+### 17. Python Software Engineer - Ubuntu Hardware Certification Team - Canonical (40% Match | EMEA / APAC | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/3658005
 - **Matched Skills:** Python
@@ -363,7 +325,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 20. Agentic Python Engineer - Evaboot (40% Match | Worldwide | 12d ago)
+### 18. Agentic Python Engineer - Evaboot (40% Match | Worldwide | 12d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://forms.gle/ALgZfzwpZU8UXvxg8
 - **Matched Skills:** Python
@@ -382,7 +344,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 21. Senior Python Developer - Eliassen Group (56% Match | Remote (Unrestricted) | Active)
+### 19. Senior Python Developer - Eliassen Group (56% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
 - **Apply URL:** https://devitjobs.com/jobs/Eliassen-Group-Senior-Python-Developer
 - **Matched Skills:** Python, PostgreSQL
@@ -401,7 +363,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 22. Senior Software Engineer - Python/Golang - Kubernetes - Canonical (40% Match | Worldwide | Active ATS)
+### 20. Senior Software Engineer - Python/Golang - Kubernetes - Canonical (40% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/7774649
 - **Matched Skills:** Python
@@ -420,7 +382,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 23. Senior Software Engineer - Python/MongoDB - Canonical (40% Match | EMEA / APAC | Active ATS)
+### 21. Senior Software Engineer - Python/MongoDB - Canonical (40% Match | EMEA / APAC | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/5937947
 - **Matched Skills:** Python
@@ -439,7 +401,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 24. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 11d ago)
+### 22. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 11d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://radar.com/jobs#jobs
 - **Matched Skills:** Python, TypeScript
@@ -458,7 +420,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 25. Data/ML Engineer (Python) - Odette Technologies (40% Match | Remote (Unrestricted) | Active)
+### 23. Data/ML Engineer (Python) - Odette Technologies (40% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
 - **Apply URL:** https://odettetechnologies.com/
 - **Matched Skills:** Python
@@ -467,6 +429,44 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 Hi Odette Technologies team,
 
 I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Data/ML Engineer (Python) role. I specialize in production Python APIs that power asynchronous AI workflows, structured JSON validation, and low-latency streaming services.
+
+You can inspect my live production system (WorkFlow Pro: https://workflow-pro-ebon.vercel.app/) and portfolio (https://myportfolio-seven-eta-43.vercel.app/) or code on GitHub (https://github.com/JunaidWarraich1).
+
+Available immediately for remote collaboration with strong EMEA/APAC/US overlap.
+Best,
+Muhammad Junaid Warraich | j.warraich2004@gmail.com
+```
+
+---
+
+### 24. Senior Python Engineer (Barcelona-based / Relocation support to Barcelona) - Manychat (40% Match | Remote (Unrestricted) | Active)
+- **Source:** Python.org Official Board
+- **Apply URL:** https://careers.manychat.com/
+- **Matched Skills:** Python
+
+```
+Hi Manychat team,
+
+I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Senior Python Engineer (Barcelona-based / Relocation support to Barcelona) role. I build reliable backend systems with Python, including double-entry financial ledgers, cryptographic idempotency keys, and row-level pessimistic locking (SELECT FOR UPDATE) to prevent race conditions.
+
+You can inspect my live production system (WorkFlow Pro: https://workflow-pro-ebon.vercel.app/) and portfolio (https://myportfolio-seven-eta-43.vercel.app/) or code on GitHub (https://github.com/JunaidWarraich1).
+
+Available immediately for remote collaboration with strong EMEA/APAC/US overlap.
+Best,
+Muhammad Junaid Warraich | j.warraich2004@gmail.com
+```
+
+---
+
+### 25. Senior Python Developer - Adzuna (40% Match | Remote (Unrestricted) | Active)
+- **Source:** Python.org Official Board
+- **Apply URL:** https://www.adzuna.co.uk/jobs/details/5826568175
+- **Matched Skills:** Python
+
+```
+Hi Adzuna team,
+
+I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Senior Python Developer role. With a dual background in Computer Science and Law (LLB), I pair Python engineering with rigorous RBAC isolation, strict input validation, and audit-ready API architecture.
 
 You can inspect my live production system (WorkFlow Pro: https://workflow-pro-ebon.vercel.app/) and portfolio (https://myportfolio-seven-eta-43.vercel.app/) or code on GitHub (https://github.com/JunaidWarraich1).
 
