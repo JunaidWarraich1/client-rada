@@ -1,6 +1,6 @@
 # Client Radar: Direct Remote Opportunities
 
-Updated: 2026-11-16 12:09 UTC
+Updated: 2026-11-16 23:53 UTC
 
 ### 1. Python Backend Engineer - Uvik Software (100% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
@@ -59,7 +59,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 4. SDK Engineer - Python - Supabase (56% Match | Worldwide | 30d ago)
+### 4. SDK Engineer - Python - Supabase (56% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Ashby)
 - **Apply URL:** https://jobs.ashbyhq.com/supabase/b65287c7-2071-4bc6-8717-58c090e2a372/application
 - **Matched Skills:** Python, PostgreSQL
@@ -97,7 +97,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 6. Founding Engineer - BuildQ (58% Match | Remote (Unrestricted) | 9d ago)
+### 6. Founding Engineer - BuildQ (58% Match | Remote (Unrestricted) | 10d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://buildq.ai/careers/founding-engineer
 - **Matched Skills:** Python, PostgreSQL, React
@@ -116,7 +116,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 7. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 6d ago)
+### 7. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 7d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://forms.gle/yJAabKvLKtJmfz21A
 - **Matched Skills:** PostgreSQL, React, TypeScript
@@ -325,7 +325,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 18. Agentic Python Engineer - Evaboot (40% Match | Worldwide | 13d ago)
+### 18. Agentic Python Engineer - Evaboot (40% Match | Worldwide | 14d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://forms.gle/ALgZfzwpZU8UXvxg8
 - **Matched Skills:** Python
@@ -401,7 +401,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 22. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 12d ago)
+### 22. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 13d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://radar.com/jobs#jobs
 - **Matched Skills:** Python, TypeScript
