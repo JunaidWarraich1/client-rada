@@ -1,6 +1,6 @@
 # Client Radar: Direct Remote Opportunities
 
-Updated: 2026-11-17 17:09 UTC
+Updated: 2026-11-18 01:55 UTC
 
 ### 1. Python Backend Engineer - Uvik Software (100% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
@@ -78,15 +78,15 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 5. Security Engineer + Data Engineer - GovStar (50% Match | Remote (Unrestricted) | 14d ago)
+### 5. Founding Engineer - BuildQ (58% Match | Remote (Unrestricted) | 11d ago)
 - **Source:** Hacker News (Direct Founder)
-- **Apply URL:** mailto:nicholas.hanson@govstar.us
-- **Matched Skills:** Python, PostgreSQL, Docker
+- **Apply URL:** https://buildq.ai/careers/founding-engineer
+- **Matched Skills:** Python, PostgreSQL, React
 
 ```
-Hi GovStar team,
+Hi BuildQ team,
 
-I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Security Engineer + Data Engineer role. I specialize in production Python, PostgreSQL, and Docker APIs that power asynchronous AI workflows, structured JSON validation, and low-latency streaming services.
+I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Founding Engineer role. I specialize in production Python, PostgreSQL, and React 18 APIs that power asynchronous AI workflows, structured JSON validation, and low-latency streaming services.
 
 You can inspect my live production system (WorkFlow Pro: https://workflow-pro-ebon.vercel.app/) and portfolio (https://myportfolio-seven-eta-43.vercel.app/) or code on GitHub (https://github.com/JunaidWarraich1).
 
@@ -97,15 +97,15 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 6. Founding Engineer - BuildQ (58% Match | Remote (Unrestricted) | 10d ago)
+### 6. Security Engineer + Data Engineer - GovStar (50% Match | Remote (Unrestricted) | 15d ago)
 - **Source:** Hacker News (Direct Founder)
-- **Apply URL:** https://buildq.ai/careers/founding-engineer
-- **Matched Skills:** Python, PostgreSQL, React
+- **Apply URL:** mailto:nicholas.hanson@govstar.us
+- **Matched Skills:** Python, PostgreSQL, Docker
 
 ```
-Hi BuildQ team,
+Hi GovStar team,
 
-I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Founding Engineer role. I specialize in production Python, PostgreSQL, and React 18 APIs that power asynchronous AI workflows, structured JSON validation, and low-latency streaming services.
+I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Security Engineer + Data Engineer role. I specialize in production Python, PostgreSQL, and Docker APIs that power asynchronous AI workflows, structured JSON validation, and low-latency streaming services.
 
 You can inspect my live production system (WorkFlow Pro: https://workflow-pro-ebon.vercel.app/) and portfolio (https://myportfolio-seven-eta-43.vercel.app/) or code on GitHub (https://github.com/JunaidWarraich1).
 
@@ -401,7 +401,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 22. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 13d ago)
+### 22. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 14d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://radar.com/jobs#jobs
 - **Matched Skills:** Python, TypeScript
