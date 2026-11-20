@@ -1,6 +1,6 @@
 # Client Radar: Direct Remote Opportunities
 
-Updated: 2026-11-19 16:52 UTC
+Updated: 2026-11-20 01:28 UTC
 
 ### 1. Python Backend Engineer - Uvik Software (100% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
@@ -78,7 +78,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 5. Founding Engineer - BuildQ (58% Match | Remote (Unrestricted) | 12d ago)
+### 5. Founding Engineer - BuildQ (58% Match | Remote (Unrestricted) | 13d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://buildq.ai/careers/founding-engineer
 - **Matched Skills:** Python, PostgreSQL, React
@@ -249,7 +249,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 14. Security Engineer + Data Engineer - GovStar (50% Match | Remote (Unrestricted) | 16d ago)
+### 14. Security Engineer + Data Engineer - GovStar (50% Match | Remote (Unrestricted) | 17d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** mailto:nicholas.hanson@govstar.us
 - **Matched Skills:** Python, PostgreSQL, Docker
@@ -420,7 +420,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 23. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 15d ago)
+### 23. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 16d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://radar.com/jobs#jobs
 - **Matched Skills:** Python, TypeScript
