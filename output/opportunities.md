@@ -1,6 +1,6 @@
 # Client Radar: Direct Remote Opportunities
 
-Updated: 2026-11-20 01:28 UTC
+Updated: 2026-11-20 12:16 UTC
 
 ### 1. Python Backend Engineer - Uvik Software (100% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
@@ -268,26 +268,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 15. Python developer - Eleks (54% Match | Remote (Unrestricted) | Active)
-- **Source:** Python.org Official Board
-- **Apply URL:** https://eleks.com/
-- **Matched Skills:** Python, REST / Pytest
-
-```
-Hi Eleks team,
-
-I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Python developer role. I specialize in production Python and Pytest APIs that power asynchronous AI workflows, structured JSON validation, and low-latency streaming services.
-
-You can inspect my live production system (WorkFlow Pro: https://workflow-pro-ebon.vercel.app/) and portfolio (https://myportfolio-seven-eta-43.vercel.app/) or code on GitHub (https://github.com/JunaidWarraich1).
-
-Available immediately for remote collaboration with strong EMEA/APAC/US overlap.
-Best,
-Muhammad Junaid Warraich | j.warraich2004@gmail.com
-```
-
----
-
-### 16. Python Software Engineer - Ubuntu Hardware Certification Team - Canonical (40% Match | EMEA / APAC | Active ATS)
+### 15. Python Software Engineer - Ubuntu Hardware Certification Team - Canonical (40% Match | EMEA / APAC | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/3658005
 - **Matched Skills:** Python
@@ -306,7 +287,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 17. Agentic Python Engineer - Evaboot (40% Match | Worldwide | Active)
+### 16. Agentic Python Engineer - Evaboot (40% Match | Worldwide | Active)
 - **Source:** Python.org Official Board
 - **Apply URL:** https://zrobinz.github.io/evaboot-jobs/
 - **Matched Skills:** Python
@@ -325,7 +306,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 18. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 10d ago)
+### 17. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 10d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://forms.gle/yJAabKvLKtJmfz21A
 - **Matched Skills:** PostgreSQL, React, TypeScript
@@ -344,7 +325,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 19. Senior Python Developer - Eliassen Group (56% Match | Remote (Unrestricted) | Active)
+### 18. Senior Python Developer - Eliassen Group (56% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
 - **Apply URL:** https://devitjobs.com/jobs/Eliassen-Group-Senior-Python-Developer
 - **Matched Skills:** Python, PostgreSQL
@@ -363,7 +344,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 20. Senior Software Engineer - Python/Golang - Kubernetes - Canonical (40% Match | Worldwide | Active ATS)
+### 19. Senior Software Engineer - Python/Golang - Kubernetes - Canonical (40% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/7774649
 - **Matched Skills:** Python
@@ -382,7 +363,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 21. Senior Software Engineer - Python/MongoDB - Canonical (40% Match | EMEA / APAC | Active ATS)
+### 20. Senior Software Engineer - Python/MongoDB - Canonical (40% Match | EMEA / APAC | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/5937947
 - **Matched Skills:** Python
@@ -401,7 +382,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 22. Data/ML Engineer (Python) - Odette Technologies (40% Match | Remote (Unrestricted) | Active)
+### 21. Data/ML Engineer (Python) - Odette Technologies (40% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
 - **Apply URL:** https://odettetechnologies.com/
 - **Matched Skills:** Python
@@ -420,7 +401,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 23. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 16d ago)
+### 22. Software Engineers (SRE, ML, backend, full-stack, mobile, security, QA) - Radar Labs (40% Match | Remote (Unrestricted) | 16d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://radar.com/jobs#jobs
 - **Matched Skills:** Python, TypeScript
@@ -439,7 +420,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 24. Senior Python Engineer (Barcelona-based / Relocation support to Barcelona) - Manychat (40% Match | Remote (Unrestricted) | Active)
+### 23. Senior Python Engineer (Barcelona-based / Relocation support to Barcelona) - Manychat (40% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
 - **Apply URL:** https://careers.manychat.com/
 - **Matched Skills:** Python
@@ -458,7 +439,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 25. Senior Python Developer - Adzuna (40% Match | Remote (Unrestricted) | Active)
+### 24. Senior Python Developer - Adzuna (40% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
 - **Apply URL:** https://www.adzuna.co.uk/jobs/details/5826568175
 - **Matched Skills:** Python
