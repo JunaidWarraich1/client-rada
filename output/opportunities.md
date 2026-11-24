@@ -1,6 +1,6 @@
 # Client Radar: Direct Remote Opportunities
 
-Updated: 2026-11-24 04:29 UTC
+Updated: 2026-11-24 19:09 UTC
 
 ### 1. Python Backend Engineer - Uvik Software (100% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
@@ -249,7 +249,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 14. Founding Engineer - BuildQ (58% Match | Remote (Unrestricted) | 17d ago)
+### 14. Founding Engineer - BuildQ (58% Match | Remote (Unrestricted) | 18d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://buildq.ai/careers/founding-engineer
 - **Matched Skills:** Python, PostgreSQL, React
@@ -306,26 +306,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 17. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 14d ago)
-- **Source:** Hacker News (Direct Founder)
-- **Apply URL:** https://forms.gle/yJAabKvLKtJmfz21A
-- **Matched Skills:** PostgreSQL, React, TypeScript
-
-```
-Hi Collabify team,
-
-I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Senior Full-Stack Engineer (backend-heavy) role. With a dual background in Computer Science and Law (LLB), I pair PostgreSQL, React 18, and TypeScript engineering with rigorous RBAC isolation, strict input validation, and audit-ready API architecture.
-
-You can inspect my live production system (WorkFlow Pro: https://workflow-pro-ebon.vercel.app/) and portfolio (https://myportfolio-seven-eta-43.vercel.app/) or code on GitHub (https://github.com/JunaidWarraich1).
-
-Available immediately for remote collaboration with strong EMEA/APAC/US overlap.
-Best,
-Muhammad Junaid Warraich | j.warraich2004@gmail.com
-```
-
----
-
-### 18. Senior Python Developer - Eliassen Group (56% Match | Remote (Unrestricted) | Active)
+### 17. Senior Python Developer - Eliassen Group (56% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
 - **Apply URL:** https://devitjobs.com/jobs/Eliassen-Group-Senior-Python-Developer
 - **Matched Skills:** Python, PostgreSQL
@@ -344,7 +325,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 19. Senior Software Engineer - Python/Golang - Kubernetes - Canonical (40% Match | Worldwide | Active ATS)
+### 18. Senior Software Engineer - Python/Golang - Kubernetes - Canonical (40% Match | Worldwide | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/7774649
 - **Matched Skills:** Python
@@ -363,7 +344,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 20. Senior Software Engineer - Python/MongoDB - Canonical (40% Match | EMEA / APAC | Active ATS)
+### 19. Senior Software Engineer - Python/MongoDB - Canonical (40% Match | EMEA / APAC | Active ATS)
 - **Source:** Direct ATS (Greenhouse)
 - **Apply URL:** https://job-boards.greenhouse.io/canonical/jobs/5937947
 - **Matched Skills:** Python
@@ -372,6 +353,25 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 Hi Canonical team,
 
 I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Senior Software Engineer - Python/MongoDB role. I specialize in production Python APIs that power asynchronous AI workflows, structured JSON validation, and low-latency streaming services.
+
+You can inspect my live production system (WorkFlow Pro: https://workflow-pro-ebon.vercel.app/) and portfolio (https://myportfolio-seven-eta-43.vercel.app/) or code on GitHub (https://github.com/JunaidWarraich1).
+
+Available immediately for remote collaboration with strong EMEA/APAC/US overlap.
+Best,
+Muhammad Junaid Warraich | j.warraich2004@gmail.com
+```
+
+---
+
+### 20. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 15d ago)
+- **Source:** Hacker News (Direct Founder)
+- **Apply URL:** https://forms.gle/yJAabKvLKtJmfz21A
+- **Matched Skills:** PostgreSQL, React, TypeScript
+
+```
+Hi Collabify team,
+
+I'm Muhammad Junaid Warraich, a Full-Stack & Backend Systems Engineer (ex-Enigmatix) applying for the Senior Full-Stack Engineer (backend-heavy) role. With a dual background in Computer Science and Law (LLB), I pair PostgreSQL, React 18, and TypeScript engineering with rigorous RBAC isolation, strict input validation, and audit-ready API architecture.
 
 You can inspect my live production system (WorkFlow Pro: https://workflow-pro-ebon.vercel.app/) and portfolio (https://myportfolio-seven-eta-43.vercel.app/) or code on GitHub (https://github.com/JunaidWarraich1).
 
