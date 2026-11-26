@@ -1,6 +1,6 @@
 # Client Radar: Direct Remote Opportunities
 
-Updated: 2026-11-26 05:41 UTC
+Updated: 2026-11-26 17:56 UTC
 
 ### 1. Python Backend Engineer - Uvik Software (100% Match | Remote (Unrestricted) | Active)
 - **Source:** Python.org Official Board
@@ -363,7 +363,7 @@ Muhammad Junaid Warraich | j.warraich2004@gmail.com
 
 ---
 
-### 20. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 16d ago)
+### 20. Senior Full-Stack Engineer (backend-heavy) - Collabify (46% Match | Worldwide | 17d ago)
 - **Source:** Hacker News (Direct Founder)
 - **Apply URL:** https://forms.gle/yJAabKvLKtJmfz21A
 - **Matched Skills:** PostgreSQL, React, TypeScript
